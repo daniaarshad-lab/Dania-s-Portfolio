@@ -205,7 +205,7 @@ const Projects = () => {
                         className="flex-1 bg-gradient-to-r from-primary to-primary-glow"
                         asChild
                       >
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <a href={`/project/${project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Demo
                         </a>
