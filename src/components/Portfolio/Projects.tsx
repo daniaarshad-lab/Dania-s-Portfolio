@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Scale, Cloud, Server } from 'lucide-react';
+import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Cloud, Vote, Landmark, Shirt } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -9,6 +9,8 @@ import skinLesionImg from '@/assets/skin-lesion-project.jpg';
 import blindAppImg from '@/assets/blind-app-project.jpg';
 import ecommerceImg from '@/assets/ecommerce-project.jpg';
 import blogImg from '@/assets/blog-project.jpg';
+import universityImg from '@/assets/university-project.jpg';
+import abayaStoreImg from '@/assets/abaya-store-project.jpg';
 
 const Projects = () => {
   const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
@@ -51,6 +53,7 @@ const Projects = () => {
       icon: Heart,
       tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       github: "https://github.com/daniaarshad-lab/breast-cancer-detection",
+      colab: "https://colab.research.google.com/",
       highlights: [
         "Custom neural network for binary classification",
         "Interactive Streamlit web application",
@@ -65,6 +68,7 @@ const Projects = () => {
       icon: Eye,
       tech: ["Python", "TensorFlow", "Keras", "ResNet-152", "OpenCV", "NumPy"],
       github: "https://github.com/daniaarshad-lab/skin-lesion-detection",
+      colab: "https://colab.research.google.com/",
       highlights: [
         "Transfer learning with ResNet-152",
         "Data augmentation for improved generalization",
@@ -97,6 +101,62 @@ const Projects = () => {
         "Separate user and admin panels",
         "Google Maps for delivery tracking",
         "Secure transactions and order management"
+      ]
+    },
+    {
+      title: "Online Voting System",
+      category: "Full Stack",
+      description: "Secure online voting platform with user authentication, candidate management, real-time vote counting, and admin dashboard for election management.",
+      image: universityImg,
+      icon: Vote,
+      tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery", "AJAX"],
+      github: "https://github.com/daniaarshad-lab/voting-system",
+      highlights: [
+        "Secure vote casting mechanism",
+        "Real-time result tracking",
+        "Admin dashboard for election control"
+      ]
+    },
+    {
+      title: "Banking System Application",
+      category: "Full Stack",
+      description: "Comprehensive banking system with account management, fund transfers, transaction history, and secure authentication for financial operations.",
+      image: ecommerceImg,
+      icon: Landmark,
+      tech: ["Java", "Spring Boot", "MySQL", "Hibernate", "REST API", "JWT"],
+      github: "https://github.com/daniaarshad-lab/banking-system",
+      highlights: [
+        "Secure fund transfer system",
+        "Transaction history tracking",
+        "Account balance management"
+      ]
+    },
+    {
+      title: "Modest Wear E-Commerce Platform",
+      category: "Full Stack",
+      description: "Elegant e-commerce platform for modest fashion including abayas with custom product catalog, secure checkout, and beautiful UI design.",
+      image: abayaStoreImg,
+      icon: Shirt,
+      tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe"],
+      github: "https://github.com/daniaarshad-lab/modest-wear",
+      highlights: [
+        "Beautiful product galleries",
+        "Size and color variations",
+        "Secure payment integration"
+      ]
+    },
+    {
+      title: "University Event Management System",
+      category: "Full Stack",
+      description: "Event management platform for universities with event creation, student registration, scheduling, and analytics features.",
+      image: universityImg,
+      icon: FileText,
+      tech: ["React", "Firebase", "Material-UI", "Cloud Functions"],
+      github: "https://github.com/daniaarshad-lab/university-events",
+      highlights: [
+        "Event creation and management",
+        "Student registration system",
+        "Real-time analytics"
       ]
     }
   ];
@@ -216,7 +276,7 @@ const Projects = () => {
                     </div>
                     
                     {/* Action Buttons */}
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       <Button
                         variant="outline"
                         size="sm"
@@ -228,6 +288,18 @@ const Projects = () => {
                           Code
                         </a>
                       </Button>
+                      {project.colab && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="group-hover:border-primary transition-colors"
+                          asChild
+                        >
+                          <a href={project.colab} target="_blank" rel="noopener noreferrer">
+                            Colab
+                          </a>
+                        </Button>
+                      )}
                       <Button
                         size="sm"
                         className="flex-1 bg-gradient-to-r from-primary to-primary-glow"

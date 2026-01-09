@@ -62,7 +62,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Passionate software engineer specializing in AI/ML integration and full-stack development
+            Experienced in AI/ML, DevOps, and Full Stack Development
           </p>
         </div>
 
@@ -80,15 +80,11 @@ const About = () => {
                 </div>
               </div>
               <div className="bg-background/50 rounded-lg p-6 border border-primary/10">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h4 className="text-xl font-semibold">Bachelor of Science in Software Engineering</h4>
-                  <span className="text-primary font-semibold">CGPA: 3.70</span>
-                </div>
+                <h4 className="text-xl font-semibold mb-2">Bachelor of Science in Software Engineering</h4>
                 <p className="text-primary font-medium mb-2">COMSATS University Islamabad, Wah Cantt Campus</p>
                 <p className="text-muted-foreground mb-2">2022 - 2026 (Expected Graduation: January 2026)</p>
                 <p className="text-muted-foreground text-sm">
                   Comprehensive education in software development, algorithms, data structures, AI/ML, and modern programming paradigms.
-                  Secured 1st Position with 4.0/4.0 GPA in 5th, 6th, and 7th semesters.
                 </p>
               </div>
             </CardContent>

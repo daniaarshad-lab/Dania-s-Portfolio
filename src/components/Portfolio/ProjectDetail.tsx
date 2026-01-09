@@ -13,51 +13,59 @@ import blogImg from '@/assets/blog-project.jpg';
 import universityImg from '@/assets/university-project.jpg';
 import abayaStoreImg from '@/assets/abaya-store-project.jpg';
 
+// Placeholder for demo images - user can update these
+const demoPlaceholder1 = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80";
+const demoPlaceholder2 = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80";
+const demoPlaceholder3 = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80";
+const demoPlaceholder4 = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80";
+
 const ProjectDetail = () => {
   const { projectId } = useParams();
 
   const projectsData: Record<string, any> = {
-    'breast-cancer': {
-      title: "Breast Cancer Detection System",
+    'breast-cancer-detection-using-neural-networks': {
+      title: "Breast Cancer Detection using Neural Networks",
       category: "AI/ML Healthcare",
-      description: "Advanced machine learning system for early breast cancer detection using medical imaging and deep learning algorithms.",
-      longDescription: "This comprehensive AI-powered system leverages state-of-the-art deep learning techniques to analyze medical imaging data for early breast cancer detection. The system employs convolutional neural networks (CNNs) trained on extensive datasets of mammography images, achieving high accuracy in identifying potential malignant tissues. The solution includes preprocessing pipelines for image enhancement, feature extraction modules, and a user-friendly interface for medical professionals.",
+      description: "Classification model for tumor detection using the Breast Cancer Wisconsin dataset with custom neural network architecture.",
+      longDescription: "This comprehensive AI-powered system leverages custom neural network architecture to analyze medical data for breast cancer detection. The system employs classification algorithms trained on the Breast Cancer Wisconsin dataset, achieving high accuracy in identifying potential malignant tissues. The solution includes an interactive Streamlit application for medical professionals.",
       image: breastCancerImg,
-      tech: ["Python", "TensorFlow", "OpenCV", "Flask", "Medical Imaging", "Keras", "NumPy", "Matplotlib"],
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       features: [
-        "Advanced CNN architecture for image classification",
-        "Real-time medical image processing",
+        "Custom neural network for binary classification",
+        "Interactive Streamlit web application",
+        "GPU-accelerated training on Google Colab",
+        "Comprehensive data visualization",
         "High accuracy detection algorithms",
-        "Secure patient data handling",
-        "Intuitive interface for medical professionals",
-        "Comprehensive reporting system"
+        "Real-time prediction interface"
       ],
       challenges: [
-        "Handling large medical imaging datasets",
+        "Handling medical imaging datasets",
         "Ensuring model accuracy and reliability",
-        "Implementing HIPAA-compliant security measures",
-        "Optimizing inference time for real-time detection"
+        "Creating an intuitive interface for medical professionals",
+        "Optimizing neural network architecture"
       ],
-      github: "https://github.com/dania-arshad/breast-cancer-detection",
-      demo: "#",
-      duration: "6 months",
+      github: "https://github.com/daniaarshad-lab/breast-cancer-detection",
+      colab: "https://colab.research.google.com/",
+      duration: "3 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'skin-lesion': {
+    'skin-lesion-detection-system': {
       title: "Skin Lesion Detection System",
       category: "AI/ML Dermatology",
-      description: "AI-powered dermatology assistant for skin lesion analysis and early melanoma detection using computer vision.",
-      longDescription: "An innovative computer vision system designed to assist dermatologists in the early detection of skin lesions and potential melanoma. The system uses advanced image processing techniques and machine learning algorithms to analyze dermoscopic images, providing accurate classification of various skin conditions. Built with PyTorch and featuring a React-based frontend, the application offers real-time analysis capabilities.",
+      description: "Deep learning model to classify skin lesions using ResNet-152 CNN for early detection of dermatological conditions.",
+      longDescription: "An innovative computer vision system designed to assist dermatologists in the early detection of skin lesions. The system uses ResNet-152 transfer learning and advanced image processing techniques to analyze dermoscopic images, providing accurate classification of various skin conditions.",
       image: skinLesionImg,
-      tech: ["Python", "PyTorch", "Computer Vision", "React", "REST API", "OpenCV", "scikit-learn", "PIL"],
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["Python", "TensorFlow", "Keras", "ResNet-152", "OpenCV", "NumPy"],
       features: [
+        "Transfer learning with ResNet-152",
+        "Data augmentation for improved generalization",
+        "Medical diagnostics application",
         "Multi-class skin lesion classification",
-        "Dermoscopic image analysis",
         "Real-time processing capabilities",
-        "Interactive web interface",
-        "Detailed analysis reports",
-        "Integration with medical databases"
+        "Detailed analysis reports"
       ],
       challenges: [
         "Handling varying image qualities and lighting conditions",
@@ -65,157 +73,225 @@ const ProjectDetail = () => {
         "Creating an intuitive interface for medical professionals",
         "Ensuring robust performance across different skin types"
       ],
-      github: "https://github.com/dania-arshad/skin-lesion-detection",
-      demo: "#",
+      github: "https://github.com/daniaarshad-lab/skin-lesion-detection",
+      colab: "https://colab.research.google.com/",
       duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'blind-app': {
-      title: "AI-Assistive Blind App",
+    'seeing-the-unseen---ai-assistant-for-visually-impaired': {
+      title: "Seeing The Unseen - AI Assistant for Visually Impaired",
       category: "AI/ML Accessibility",
-      description: "Team project developing an AI-powered mobile application to assist visually impaired users with navigation and object recognition.",
-      longDescription: "A collaborative mobile application project focused on creating an AI-powered assistive technology for visually impaired individuals. The app combines computer vision, natural language processing, and voice interaction to provide real-time environmental awareness, object recognition, and navigation assistance. Built using React Native for cross-platform compatibility and TensorFlow Lite for on-device AI processing.",
+      description: "Vision-based assistant empowering visually impaired users through object detection, OCR, currency recognition, and scene description.",
+      longDescription: "A collaborative mobile application project focused on creating an AI-powered assistive technology for visually impaired individuals. The app combines computer vision with YOLOv4 and YOLOv11, natural language processing with Gemini 2.0, and voice interaction to provide real-time environmental awareness, object recognition, currency identification, and navigation assistance.",
       image: blindAppImg,
-      tech: ["React Native", "TensorFlow Lite", "Voice AI", "Mobile Development", "Accessibility", "Computer Vision", "NLP", "GPS"],
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["Python", "Flutter", "FastAPI", "Gemini 2.0", "LangChain", "TensorFlow", "YOLOv4", "YOLOv11"],
       features: [
-        "Real-time object recognition and description",
+        "YOLOv4 achieving 93% accuracy at 60 FPS",
+        "Currency recognition with 95% accuracy using YOLOv11",
+        "FaceNet for person identification with embeddings",
         "Voice-guided navigation system",
         "Text-to-speech for written content",
-        "Obstacle detection and avoidance",
-        "Emergency assistance features",
-        "Offline functionality for core features"
+        "Real-time scene description"
       ],
       challenges: [
         "Optimizing AI models for mobile devices",
         "Ensuring fast and accurate real-time processing",
         "Creating an accessible user interface",
-        "Implementing reliable voice interaction",
-        "Coordinating team development efforts"
+        "Implementing reliable voice interaction"
       ],
-      github: "https://github.com/dania-arshad/ai-assistive-blind-app",
-      demo: "#",
+      github: "https://github.com/daniaarshad-lab/seeing-the-unseen",
       duration: "8 months",
       team: "4 members",
       status: "In Development"
     },
-    'ecommerce': {
-      title: "E-Commerce Platform",
+    'full-stack-e-commerce-platform': {
+      title: "Full Stack E-Commerce Platform",
       category: "Full-Stack Web Application",
-      description: "Full-stack e-commerce solution with advanced features including payment integration, inventory management, and analytics.",
-      longDescription: "A comprehensive e-commerce platform built with modern web technologies, featuring a complete shopping experience from product browsing to payment processing. The application includes advanced inventory management, real-time analytics, user authentication, and secure payment integration. Built with React frontend, Node.js backend, and MongoDB database for scalable performance.",
+      description: "Complete e-commerce platform with user authentication, product catalog, cart, checkout system, and Google Maps integration.",
+      longDescription: "A comprehensive e-commerce platform built with Laravel and PHP, featuring a complete shopping experience from product browsing to payment processing. The application includes advanced inventory management, separate user and admin panels, Google Maps integration for delivery tracking, and secure email services.",
       image: ecommerceImg,
-      tech: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "Express", "JWT", "Socket.io"],
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "Google Maps API", "Email Services"],
       features: [
+        "Separate user and admin panels",
+        "Google Maps for delivery tracking",
+        "Secure transactions and order management",
         "Complete shopping cart functionality",
-        "Secure payment processing with Stripe",
-        "Advanced product search and filtering",
-        "Real-time inventory management",
         "User authentication and authorization",
-        "Order tracking and management",
-        "Admin dashboard with analytics",
         "Responsive design for all devices"
       ],
       challenges: [
         "Implementing secure payment processing",
-        "Managing complex state with Redux",
+        "Managing complex state across panels",
         "Ensuring scalable database design",
-        "Creating responsive and intuitive UI",
-        "Handling real-time inventory updates"
+        "Creating responsive and intuitive UI"
       ],
-      github: "https://github.com/dania-arshad/ecommerce-platform",
-      demo: "#",
+      github: "https://github.com/daniaarshad-lab/ecommerce-platform",
       duration: "5 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'blog': {
-      title: "Blog Publishing Platform",
+    'full-stack-blog-publishing-platform': {
+      title: "Full Stack Blog Publishing Platform",
       category: "Full-Stack Web Application",
-      description: "Modern content management system with rich text editing, user authentication, and social features for bloggers.",
-      longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with Next.js for optimal performance and SEO, the platform includes a powerful rich text editor, user management system, and social interaction features. The application uses PostgreSQL with Prisma ORM for robust data management and NextAuth for secure authentication.",
+      description: "Comprehensive tech blog platform with user authentication, article management, and admin review workflow.",
+      longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with React, TypeScript and Supabase, the platform includes role-based access control, real-time publishing pipeline, and Row Level Security policies for secure data access.",
       image: blogImg,
-      tech: ["Next.js", "PostgreSQL", "Prisma", "NextAuth", "Tailwind CSS", "Vercel", "Rich Text Editor", "SEO"],
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
+        "Role-based access control",
+        "Real-time publishing pipeline",
+        "Supabase RLS for secure data access",
         "Rich text editor with multimedia support",
-        "User authentication and profiles",
-        "Comment system and social interactions",
-        "SEO-optimized content delivery",
         "Tag and category management",
-        "Draft and publishing workflow",
-        "Responsive design",
-        "Real-time notifications"
+        "Responsive design"
       ],
       challenges: [
         "Implementing SEO-friendly routing",
         "Creating a powerful yet user-friendly editor",
         "Managing user-generated content securely",
-        "Optimizing performance for large content volumes",
-        "Implementing real-time features"
+        "Optimizing performance for large content volumes"
       ],
-      github: "https://github.com/dania-arshad/blog-platform",
-      demo: "#",
+      github: "https://github.com/daniaarshad-lab/blog-platform",
       duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'university': {
-      title: "University Event Management",
-      category: "Full-Stack Web Application",
-      description: "Comprehensive event management system for universities with scheduling, registration, and analytics features.",
-      longDescription: "A comprehensive event management system specifically designed for university environments. The platform handles event creation, student registration, scheduling conflicts, and provides detailed analytics for event organizers. Built with React and Firebase for real-time capabilities, the system supports multiple user roles and complex event management workflows.",
-      image: universityImg,
-      tech: ["React", "Firebase", "Material-UI", "Cloud Functions", "Real-time Database", "Authentication", "Analytics"],
+    'end-to-end-devops-cicd-pipeline-on-aws': {
+      title: "End-to-End DevOps CI/CD Pipeline on AWS",
+      category: "DevOps",
+      description: "Complete CI/CD pipeline automating build, test, and deployment workflows with monitoring and alerting.",
+      longDescription: "A comprehensive DevOps pipeline built on AWS infrastructure using Terraform for infrastructure provisioning. The pipeline includes Docker containerization, Jenkins for CI/CD, Kubernetes for orchestration, and Prometheus with Grafana for real-time monitoring and alerting.",
+      image: blogImg,
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["AWS", "Docker", "DockerHub", "Jenkins", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
       features: [
-        "Event creation and management",
-        "Student registration system",
-        "Real-time capacity tracking",
-        "Automated email notifications",
-        "Calendar integration",
-        "Analytics and reporting",
-        "Multi-role user management",
-        "Mobile-responsive interface"
+        "Terraform-provisioned AWS infrastructure",
+        "Kubernetes container orchestration",
+        "Real-time monitoring with Prometheus & Grafana",
+        "Automated build and test workflows",
+        "Docker containerization",
+        "Scalable deployment architecture"
       ],
       challenges: [
-        "Managing complex scheduling requirements",
-        "Implementing real-time updates across users",
-        "Creating intuitive admin interfaces",
-        "Handling large numbers of concurrent registrations",
-        "Ensuring data consistency in real-time environment"
+        "Managing complex infrastructure as code",
+        "Ensuring zero-downtime deployments",
+        "Implementing comprehensive monitoring",
+        "Handling security across the pipeline"
       ],
-      github: "https://github.com/dania-arshad/university-events",
-      demo: "#",
-      duration: "6 months",
+      github: "https://github.com/daniaarshad-lab/devops-cicd-pipeline",
+      duration: "3 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'abaya-store': {
-      title: "Abaya Store Website",
-      category: "E-Commerce Web Application",
-      description: "Elegant e-commerce platform for Islamic fashion with custom product catalog and shopping experience.",
-      longDescription: "An elegant and culturally-sensitive e-commerce platform specializing in Islamic fashion, particularly abayas. The website features a beautiful, culturally-appropriate design with advanced product catalog management, secure payment processing, and a smooth shopping experience. Built with React and Node.js, the platform includes custom styling and PayPal integration for global customers.",
-      image: abayaStoreImg,
-      tech: ["React", "Node.js", "MongoDB", "PayPal Integration", "SCSS", "JWT", "Express", "Multer"],
+    'online-voting-system': {
+      title: "Online Voting System",
+      category: "Full-Stack Web Application",
+      description: "Secure online voting platform with user authentication, candidate management, and real-time vote counting.",
+      longDescription: "A secure and reliable online voting system designed for elections with features including user authentication, candidate management, real-time vote counting, and comprehensive admin dashboard for election management and monitoring.",
+      image: universityImg,
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery", "AJAX"],
       features: [
-        "Elegant product catalog with image galleries",
-        "Size and color variation management",
-        "Secure PayPal payment integration",
+        "Secure vote casting mechanism",
+        "Real-time result tracking",
+        "Admin dashboard for election control",
+        "User authentication and verification",
+        "Candidate management system",
+        "Audit trail for transparency"
+      ],
+      challenges: [
+        "Ensuring vote security and integrity",
+        "Preventing duplicate voting",
+        "Real-time vote counting accuracy",
+        "Scalability for large elections"
+      ],
+      github: "https://github.com/daniaarshad-lab/voting-system",
+      duration: "2 months",
+      team: "Solo Project",
+      status: "Completed"
+    },
+    'banking-system-application': {
+      title: "Banking System Application",
+      category: "Full-Stack Application",
+      description: "Comprehensive banking system with account management, fund transfers, and secure authentication.",
+      longDescription: "A full-featured banking system application built with Java and Spring Boot, featuring account management, secure fund transfers, detailed transaction history, and JWT-based authentication for all financial operations.",
+      image: ecommerceImg,
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["Java", "Spring Boot", "MySQL", "Hibernate", "REST API", "JWT"],
+      features: [
+        "Secure fund transfer system",
+        "Transaction history tracking",
+        "Account balance management",
+        "JWT-based authentication",
+        "Account creation and management",
+        "Statement generation"
+      ],
+      challenges: [
+        "Implementing secure financial transactions",
+        "Ensuring data consistency",
+        "Building robust authentication",
+        "Handling concurrent transactions"
+      ],
+      github: "https://github.com/daniaarshad-lab/banking-system",
+      duration: "3 months",
+      team: "Solo Project",
+      status: "Completed"
+    },
+    'modest-wear-e-commerce-platform': {
+      title: "Modest Wear E-Commerce Platform",
+      category: "E-Commerce Web Application",
+      description: "Elegant e-commerce platform for modest fashion including abayas with custom product catalog and secure checkout.",
+      longDescription: "An elegant and culturally-sensitive e-commerce platform specializing in modest fashion. The website features beautiful product galleries with size and color variations, secure Stripe payment integration, and a smooth shopping experience built with React and Node.js.",
+      image: abayaStoreImg,
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe"],
+      features: [
+        "Beautiful product galleries",
+        "Size and color variations",
+        "Secure payment integration",
         "Customer account management",
         "Order tracking system",
-        "Wishlist functionality",
-        "Review and rating system",
-        "Cultural design elements"
+        "Wishlist functionality"
       ],
       challenges: [
         "Creating culturally appropriate design",
         "Managing complex product variations",
         "Implementing international payment processing",
-        "Optimizing images for fast loading",
-        "Ensuring mobile responsiveness for all features"
+        "Optimizing images for fast loading"
       ],
-      github: "https://github.com/dania-arshad/abaya-store",
-      demo: "#",
+      github: "https://github.com/daniaarshad-lab/modest-wear",
       duration: "3 months",
+      team: "Solo Project",
+      status: "Completed"
+    },
+    'university-event-management-system': {
+      title: "University Event Management System",
+      category: "Full-Stack Web Application",
+      description: "Event management platform for universities with event creation, student registration, and analytics.",
+      longDescription: "A comprehensive event management system specifically designed for university environments. The platform handles event creation, student registration, scheduling, and provides detailed analytics for event organizers using React and Firebase.",
+      image: universityImg,
+      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      tech: ["React", "Firebase", "Material-UI", "Cloud Functions"],
+      features: [
+        "Event creation and management",
+        "Student registration system",
+        "Real-time analytics",
+        "Calendar integration",
+        "Automated notifications",
+        "Multi-role user management"
+      ],
+      challenges: [
+        "Managing complex scheduling requirements",
+        "Implementing real-time updates across users",
+        "Creating intuitive admin interfaces",
+        "Handling large concurrent registrations"
+      ],
+      github: "https://github.com/daniaarshad-lab/university-events",
+      duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     }
@@ -259,38 +335,25 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Project Image */}
+        {/* Demo Images Gallery */}
         <div className="mb-12">
-          <Card className="glass-card overflow-hidden">
-            <CardContent className="p-0">
-              <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                
-                {/* Action Buttons Overlay */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex gap-4 justify-center">
-                    <Button variant="outline" className="bg-background/90 backdrop-blur-sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        View Code
-                      </a>
-                    </Button>
-                    <Button className="bg-primary/90 backdrop-blur-sm" asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+          <h2 className="text-2xl font-bold mb-6 text-center">Project Screenshots</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {project.demoImages?.map((img: string, index: number) => (
+              <Card key={index} className="glass-card overflow-hidden group">
+                <CardContent className="p-0">
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={img}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Project Details Grid */}
@@ -386,23 +449,31 @@ const ProjectDetail = () => {
               </CardContent>
             </Card>
 
-            {/* Documentation */}
+            {/* Links */}
             <Card className="glass-card">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Documentation</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Links</h3>
                 <div className="space-y-3">
-                  <a href="#" className="flex items-center text-primary hover:text-primary/80 transition-colors">
-                    <Database className="w-4 h-4 mr-2" />
-                    API Documentation
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub Repository
                   </a>
-                  <a href="#" className="flex items-center text-primary hover:text-primary/80 transition-colors">
-                    <Globe className="w-4 h-4 mr-2" />
-                    Deployment Guide
-                  </a>
-                  <a href="#" className="flex items-center text-primary hover:text-primary/80 transition-colors">
-                    <Shield className="w-4 h-4 mr-2" />
-                    Security Overview
-                  </a>
+                  {project.colab && (
+                    <a 
+                      href={project.colab} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <Globe className="w-4 h-4 mr-2" />
+                      Google Colab Notebook
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>
