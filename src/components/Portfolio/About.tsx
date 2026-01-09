@@ -1,23 +1,57 @@
-import { Code, FileText, Palette, GraduationCap, Award, BookOpen } from 'lucide-react';
+import { Code, FileText, Palette, GraduationCap, Award, BookOpen, Database, Cloud, Terminal, Wrench } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
-  const skills = [
+  const technicalSkills = [
+    {
+      category: "AI & ML",
+      icon: Award,
+      items: ["TensorFlow", "Keras", "PyTorch", "YOLO", "ResNet", "Custom Neural Networks", "Image Classification"]
+    },
     {
       category: "Development",
       icon: Code,
-      items: ["React", "Node.js", "Python", "TypeScript", "Full-Stack Development"]
+      items: ["React", "TypeScript", "Laravel", "Django", "FastAPI", "Node.js"]
     },
     {
-      category: "AI/ML",
-      icon: Award,
-      items: ["TensorFlow", "PyTorch", "Computer Vision", "Deep Learning", "Medical AI"]
+      category: "Databases",
+      icon: Database,
+      items: ["MySQL", "PostgreSQL", "Supabase", "SQLite3", "MongoDB"]
     },
     {
-      category: "Design & Documentation",
-      icon: Palette,
-      items: ["UI/UX Design", "Technical Writing", "System Architecture", "API Documentation"]
+      category: "Cloud & DevOps",
+      icon: Cloud,
+      items: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform", "Prometheus", "Grafana"]
+    },
+    {
+      category: "Languages",
+      icon: Terminal,
+      items: ["Python", "JavaScript", "C++", "Java", "PHP", "HTML/CSS"]
+    },
+    {
+      category: "Tools",
+      icon: Wrench,
+      items: ["Git", "GitHub", "Jira", "VS Code", "Google Colab", "Linux", "Android Studio"]
     }
+  ];
+
+  const otherSkills = [
+    "Technical Documentation",
+    "UML Modeling",
+    "Lucidchart",
+    "Visual Paradigm",
+    "Canva",
+    "Agile Practices",
+    "Team Collaboration"
+  ];
+
+  const interpersonalSkills = [
+    "Ethical awareness in handling data and systems",
+    "Effective time management and accountability",
+    "Team collaboration with initiative-taking attitude",
+    "Curiosity and commitment to continuous learning",
+    "Strong attention to accuracy and quality",
+    "Leadership skills as Class Representative"
   ];
 
   return (
@@ -28,7 +62,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Passionate software engineer bridging the gap between cutting-edge AI/ML and beautiful web experiences
+            Passionate software engineer specializing in AI/ML integration and full-stack development
           </p>
         </div>
 
@@ -46,83 +80,98 @@ const About = () => {
                 </div>
               </div>
               <div className="bg-background/50 rounded-lg p-6 border border-primary/10">
-                <h4 className="text-xl font-semibold mb-2">Bachelor of Science in Software Engineering</h4>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h4 className="text-xl font-semibold">Bachelor of Science in Software Engineering</h4>
+                  <span className="text-primary font-semibold">CGPA: 3.70</span>
+                </div>
                 <p className="text-primary font-medium mb-2">COMSATS University Islamabad, Wah Cantt Campus</p>
-                <p className="text-muted-foreground">
-                  Comprehensive education in software development, algorithms, data structures, and modern programming paradigms.
-                  Specialized in AI/ML applications and full-stack web development.
+                <p className="text-muted-foreground mb-2">2022 - 2026 (Expected Graduation: January 2026)</p>
+                <p className="text-muted-foreground text-sm">
+                  Comprehensive education in software development, algorithms, data structures, AI/ML, and modern programming paradigms.
+                  Secured 1st Position with 4.0/4.0 GPA in 5th, 6th, and 7th semesters.
                 </p>
               </div>
             </CardContent>
           </Card>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {skills.map((skillGroup, index) => {
-              const IconComponent = skillGroup.icon;
-              return (
-                <Card 
-                  key={index} 
-                  className="glass-card hover-glow animate-fade-in" 
-                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                        <IconComponent className="w-5 h-5 text-primary" />
+          {/* Technical Skills Grid */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-center mb-6">Technical Skills</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {technicalSkills.map((skillGroup, index) => {
+                const IconComponent = skillGroup.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className="glass-card hover-glow animate-fade-in" 
+                    style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                  >
+                    <CardContent className="p-5">
+                      <div className="flex items-center mb-3">
+                        <div className="w-9 h-9 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+                          <IconComponent className="w-4 h-4 text-primary" />
+                        </div>
+                        <h4 className="font-semibold">{skillGroup.category}</h4>
                       </div>
-                      <h3 className="text-lg font-semibold">{skillGroup.category}</h3>
-                    </div>
-                    <ul className="space-y-2">
-                      {skillGroup.items.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="text-sm text-muted-foreground flex items-center">
-                          <div className="w-2 h-2 bg-primary/60 rounded-full mr-2"></div>
-                          {skill}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                      <div className="flex flex-wrap gap-1.5">
+                        {skillGroup.items.map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Expertise Section */}
-          <Card className="glass-card hover-glow animate-fade-in" style={{ animationDelay: '0.7s' }}>
-            <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <FileText className="w-6 h-6 text-primary" />
+          {/* Other Skills & Documentation */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="glass-card hover-glow animate-fade-in" style={{ animationDelay: '0.7s' }}>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+                    <FileText className="w-5 h-5 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold">Documentation & Design</h4>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Design & Documentation</h3>
-                  <p className="text-muted-foreground">Beyond Code</p>
+                <div className="flex flex-wrap gap-2">
+                  {otherSkills.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 bg-background/50 border border-primary/20 text-muted-foreground text-sm rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-background/50 rounded-lg p-6 border border-primary/10">
-                  <h4 className="text-lg font-semibold mb-3 flex items-center">
-                    <Palette className="w-5 h-5 mr-2 text-primary" />
-                    Design Excellence
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Crafting intuitive user interfaces and experiences that seamlessly blend functionality with aesthetics. 
-                    Focus on modern, responsive designs that engage users and drive results.
-                  </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover-glow animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold">Interpersonal Skills</h4>
                 </div>
-                <div className="bg-background/50 rounded-lg p-6 border border-primary/10">
-                  <h4 className="text-lg font-semibold mb-3 flex items-center">
-                    <BookOpen className="w-5 h-5 mr-2 text-primary" />
-                    Technical Documentation
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Creating comprehensive technical documentation, API references, and system architecture guides. 
-                    Ensuring knowledge transfer and maintainable codebases for future developers.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                <ul className="space-y-2">
+                  {interpersonalSkills.map((skill, index) => (
+                    <li key={index} className="text-sm text-muted-foreground flex items-start">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Background decoration */}

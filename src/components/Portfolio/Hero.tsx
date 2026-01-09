@@ -46,11 +46,11 @@ const Hero = () => {
               Dania Arshad
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
-              Software Engineer
+              Full Stack Developer | AI/ML Engineer
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Passionate full-stack developer specializing in AI/ML integration, 
-              creating innovative solutions that bridge technology and human needs.
+              Passionate about integrating AI/ML solutions with full-stack development, 
+              building innovative applications that bridge technology and human needs.
             </p>
           </div>
           
@@ -62,7 +62,7 @@ const Hero = () => {
               className="glass-card hover-glow group"
               asChild
             >
-              <a href="https://linkedin.com/in/dania-arshad" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/dania-arshad-se" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 mr-2 group-hover:text-primary transition-colors" />
                 LinkedIn
               </a>
@@ -74,7 +74,7 @@ const Hero = () => {
               className="glass-card hover-glow group"
               asChild
             >
-              <a href="https://github.com/dania-arshad" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/daniaarshad-lab" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 mr-2 group-hover:text-primary transition-colors" />
                 GitHub
               </a>
@@ -86,7 +86,7 @@ const Hero = () => {
               className="glass-card hover-glow group"
               asChild
             >
-              <a href="mailto:dania.arshad@email.com">
+              <a href="mailto:daniaarshad19@gmail.com">
                 <Mail className="w-5 h-5 mr-2 group-hover:text-primary transition-colors" />
                 Contact
               </a>

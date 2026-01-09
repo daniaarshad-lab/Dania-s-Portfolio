@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, ExternalLink, Brain, Globe, Heart, Eye, ShoppingCart, FileText, Calendar, Shirt } from 'lucide-react';
+import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Scale, Cloud, Server } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -9,82 +9,95 @@ import skinLesionImg from '@/assets/skin-lesion-project.jpg';
 import blindAppImg from '@/assets/blind-app-project.jpg';
 import ecommerceImg from '@/assets/ecommerce-project.jpg';
 import blogImg from '@/assets/blog-project.jpg';
-import universityImg from '@/assets/university-project.jpg';
-import abayaStoreImg from '@/assets/abaya-store-project.jpg';
 
 const Projects = () => {
   const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
 
   const projects = [
     {
-      title: "Breast Cancer Detection System",
-      category: "AI/ML",
-      description: "Advanced machine learning system for early breast cancer detection using medical imaging and deep learning algorithms.",
+      title: "Seeing The Unseen - AI Assistant for Visually Impaired",
+      category: "Final Year Project",
+      description: "Vision-based assistant empowering visually impaired users through object detection, OCR, currency recognition, person identification, and intelligent scene description with real-time audio feedback.",
+      image: blindAppImg,
+      icon: Brain,
+      tech: ["Python", "Flutter", "FastAPI", "Gemini 2.0", "LangChain", "TensorFlow", "YOLOv4", "YOLOv11"],
+      github: "https://github.com/daniaarshad-lab/seeing-the-unseen",
+      supervisor: "Dr. Faisal Azam",
+      highlights: [
+        "YOLOv4 achieving 93% accuracy at 60 FPS",
+        "Currency recognition with 95% accuracy using YOLOv11",
+        "FaceNet for person identification with embeddings"
+      ]
+    },
+    {
+      title: "End-to-End DevOps CI/CD Pipeline on AWS",
+      category: "DevOps",
+      description: "Complete CI/CD pipeline automating build, test, and deployment workflows with monitoring, alerting, and team collaboration practices.",
+      image: blogImg,
+      icon: Cloud,
+      tech: ["AWS", "Docker", "DockerHub", "Jenkins", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
+      github: "https://github.com/daniaarshad-lab/devops-cicd-pipeline",
+      highlights: [
+        "Terraform-provisioned AWS infrastructure",
+        "Kubernetes container orchestration",
+        "Real-time monitoring with Prometheus & Grafana"
+      ]
+    },
+    {
+      title: "Breast Cancer Detection using Neural Networks",
+      category: "Data Science",
+      description: "Classification model for tumor detection using the Breast Cancer Wisconsin dataset with custom neural network architecture and interactive Streamlit application.",
       image: breastCancerImg,
       icon: Heart,
-      tech: ["Python", "TensorFlow", "OpenCV", "Flask", "Medical Imaging"],
-      github: "https://github.com/dania-arshad/breast-cancer-detection",
-      demo: "#"
+      tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
+      github: "https://github.com/daniaarshad-lab/breast-cancer-detection",
+      highlights: [
+        "Custom neural network for binary classification",
+        "Interactive Streamlit web application",
+        "GPU-accelerated training on Google Colab"
+      ]
     },
     {
       title: "Skin Lesion Detection System",
-      category: "AI/ML",
-      description: "AI-powered dermatology assistant for skin lesion analysis and early melanoma detection using computer vision.",
+      category: "Deep Learning",
+      description: "Deep learning model to classify skin lesions using medical image datasets with ResNet-152 CNN for early detection of dermatological conditions.",
       image: skinLesionImg,
       icon: Eye,
-      tech: ["Python", "PyTorch", "Computer Vision", "React", "REST API"],
-      github: "https://github.com/dania-arshad/skin-lesion-detection",
-      demo: "#"
+      tech: ["Python", "TensorFlow", "Keras", "ResNet-152", "OpenCV", "NumPy"],
+      github: "https://github.com/daniaarshad-lab/skin-lesion-detection",
+      highlights: [
+        "Transfer learning with ResNet-152",
+        "Data augmentation for improved generalization",
+        "Medical diagnostics application"
+      ]
     },
     {
-      title: "AI-Assistive Blind App",
-      category: "AI/ML",
-      description: "Team project developing an AI-powered mobile application to assist visually impaired users with navigation and object recognition.",
-      image: blindAppImg,
-      icon: Brain,
-      tech: ["React Native", "TensorFlow Lite", "Voice AI", "Mobile Development", "Accessibility"],
-      github: "https://github.com/dania-arshad/ai-assistive-blind-app",
-      demo: "#"
-    },
-    {
-      title: "E-Commerce Platform",
-      category: "Web Application",
-      description: "Full-stack e-commerce solution with advanced features including payment integration, inventory management, and analytics.",
-      image: ecommerceImg,
-      icon: ShoppingCart,
-      tech: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "Express"],
-      github: "https://github.com/dania-arshad/ecommerce-platform",
-      demo: "#"
-    },
-    {
-      title: "Blog Publishing Platform",
-      category: "Web Application",
-      description: "Modern content management system with rich text editing, user authentication, and social features for bloggers.",
+      title: "Full Stack Blog Publishing Platform",
+      category: "Full Stack",
+      description: "Comprehensive tech blog platform with user authentication, article management, admin review workflow, and Row Level Security policies.",
       image: blogImg,
       icon: FileText,
-      tech: ["Next.js", "PostgreSQL", "Prisma", "NextAuth", "Tailwind CSS", "Vercel"],
-      github: "https://github.com/dania-arshad/blog-platform",
-      demo: "#"
+      tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
+      github: "https://github.com/daniaarshad-lab/blog-platform",
+      highlights: [
+        "Role-based access control",
+        "Real-time publishing pipeline",
+        "Supabase RLS for secure data access"
+      ]
     },
     {
-      title: "University Event Management",
-      category: "Web Application",
-      description: "Comprehensive event management system for universities with scheduling, registration, and analytics features.",
-      image: universityImg,
-      icon: Calendar,
-      tech: ["React", "Firebase", "Material-UI", "Cloud Functions", "Real-time Database"],
-      github: "https://github.com/dania-arshad/university-events",
-      demo: "#"
-    },
-    {
-      title: "Abaya Store Website",
-      category: "Web Application",
-      description: "Elegant e-commerce platform for Islamic fashion with custom product catalog and shopping experience.",
-      image: abayaStoreImg,
-      icon: Shirt,
-      tech: ["React", "Node.js", "MongoDB", "PayPal Integration", "SCSS", "JWT"],
-      github: "https://github.com/dania-arshad/abaya-store",
-      demo: "#"
+      title: "Full Stack E-Commerce Platform",
+      category: "Full Stack",
+      description: "Complete e-commerce platform with user authentication, product catalog, cart, checkout system, and Google Maps integration for delivery tracking.",
+      image: ecommerceImg,
+      icon: ShoppingCart,
+      tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "Google Maps API", "Email Services"],
+      github: "https://github.com/daniaarshad-lab/ecommerce-platform",
+      highlights: [
+        "Separate user and admin panels",
+        "Google Maps for delivery tracking",
+        "Secure transactions and order management"
+      ]
     }
   ];
 
@@ -115,7 +128,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Exploring the intersection of AI/ML and web development through innovative solutions
+            AI/ML solutions and full-stack applications solving real-world problems
           </p>
         </div>
 
@@ -135,7 +148,7 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-0">
-                  {/* Project Image with Circular Animation */}
+                  {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
                     <div className={`project-circle absolute inset-0 ${isVisible ? 'project-circle' : ''}`}>
                       <img
@@ -163,16 +176,31 @@ const Projects = () => {
                   
                   {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {project.supervisor && (
+                      <p className="text-xs text-primary mb-2">Supervisor: {project.supervisor}</p>
+                    )}
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">
                       {project.description}
                     </p>
                     
+                    {/* Highlights */}
+                    {project.highlights && (
+                      <ul className="mb-4 space-y-1">
+                        {project.highlights.slice(0, 2).map((highlight, hIndex) => (
+                          <li key={hIndex} className="text-xs text-muted-foreground flex items-start">
+                            <span className="w-1 h-1 bg-primary rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-1 mb-4">
-                      {project.tech.slice(0, 3).map((tech, techIndex) => (
+                      {project.tech.slice(0, 4).map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
@@ -180,9 +208,9 @@ const Projects = () => {
                           {tech}
                         </span>
                       ))}
-                      {project.tech.length > 3 && (
+                      {project.tech.length > 4 && (
                         <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md">
-                          +{project.tech.length - 3} more
+                          +{project.tech.length - 4} more
                         </span>
                       )}
                     </div>
