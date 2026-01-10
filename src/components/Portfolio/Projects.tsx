@@ -202,10 +202,13 @@ const Projects = () => {
               <Card
                 key={index}
                 data-index={index}
-                className={`project-card glass-card hover-glow group overflow-hidden transition-all duration-700 ${
-                  isVisible ? 'animate-bounce-in' : 'opacity-0 translate-y-10'
+                className={`project-card glass-card group overflow-hidden transition-all duration-500 ease-out hover:scale-[1.03] hover:shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.25)] ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ 
+                  transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
+                  transitionProperty: 'opacity, transform, box-shadow'
+                }}
               >
                 <CardContent className="p-0">
                   {/* Project Image */}
