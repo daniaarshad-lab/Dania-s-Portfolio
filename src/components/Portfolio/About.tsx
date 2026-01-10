@@ -61,8 +61,11 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text animate-fade-in">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Experienced in AI/ML, DevOps, and Full Stack Development
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            Hi, I'm Dania, a Software Engineer who loves building AI-powered and automated systems that solve real problems. I work with AI/ML, DevOps, and full-stack technologies to turn ideas into scalable, real-world solutions, focusing on smart systems that eliminate manual work and integrate AI efficiently.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto animate-fade-in leading-relaxed mt-4" style={{ animationDelay: '0.3s' }}>
+            I understand and drive the entire Software Development Life Cycle — from gathering requirements and understanding client needs to designing system architecture and creating clear, detailed documentation. I enjoy building the foundation that makes great software possible.
           </p>
         </div>
 
@@ -83,6 +86,7 @@ const About = () => {
                 <h4 className="text-xl font-semibold mb-2">Bachelor of Science in Software Engineering</h4>
                 <p className="text-primary font-medium mb-2">COMSATS University Islamabad, Wah Cantt Campus</p>
                 <p className="text-muted-foreground mb-2">2022 - 2026 (Expected Graduation: January 2026)</p>
+                <p className="text-primary font-semibold mb-2">CGPA: 3.7/4</p>
                 <p className="text-muted-foreground text-sm">
                   Comprehensive education in software development, algorithms, data structures, AI/ML, and modern programming paradigms.
                 </p>

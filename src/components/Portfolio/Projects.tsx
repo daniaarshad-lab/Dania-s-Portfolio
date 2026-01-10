@@ -210,13 +210,11 @@ const Projects = () => {
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <div className={`project-circle absolute inset-0 ${isVisible ? 'project-circle' : ''}`}>
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover project-image-hover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     
                     {/* Category Badge */}
