@@ -146,8 +146,12 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  .project-circle {
-    animation: rotate-bounce 8s ease-in-out infinite;
+  .project-image-hover {
+    transition: transform 0.4s ease-out;
+  }
+  
+  .project-image-hover:hover {
+    transform: scale(1.08);
   }
   
   .stagger-animation {

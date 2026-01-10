@@ -46,11 +46,10 @@ const Hero = () => {
               Dania Arshad
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
-              Full Stack Developer | AI/ML Engineer
+              AI/ML | DevOps | Full Stack Development
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Passionate about integrating AI/ML solutions with full-stack development, 
-              building innovative applications that bridge technology and human needs.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Passionate about integrating AI/ML solutions with full-stack development, A Software Engineer with hands-on experience in AI automation, full-stack development, and DevOps. I enjoy designing smart systems that eliminate manual work, integrate AI, and scale efficiently, building innovative applications that bridge technology and human needs.
             </p>
           </div>
           
@@ -98,9 +97,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary to-primary-glow hover:scale-105 transition-transform shadow-lg hover:shadow-primary/50"
+              asChild
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
+              <a href="/Dania_Arshad_Resume.pdf" download="Dania_Arshad_Resume.pdf">
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </a>
             </Button>
             
             <Button 
