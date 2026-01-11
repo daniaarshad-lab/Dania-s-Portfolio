@@ -14,11 +14,9 @@ import blogImg from '@/assets/blog-project.jpg';
 import universityImg from '@/assets/university-project.jpg';
 import abayaStoreImg from '@/assets/abaya-store-project.jpg';
 
-// Placeholder for demo images - user can update these
-const demoPlaceholder1 = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80";
-const demoPlaceholder2 = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80";
-const demoPlaceholder3 = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80";
-const demoPlaceholder4 = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80";
+// To add your demo videos:
+// 1. Place your .mp4 files in the public/videos/ folder
+// 2. Name them: breast-cancer-demo.mp4, seeing-unseen-demo.mp4, blog-platform-demo.mp4
 
 // Video Player Component
 const VideoPlayer = ({ videoUrl, title }: { videoUrl: string; title: string }) => {
@@ -102,8 +100,7 @@ const ProjectDetail = () => {
       description: "Classification model for tumor detection using the Breast Cancer Wisconsin dataset with custom neural network architecture.",
       longDescription: "This comprehensive AI-powered system leverages custom neural network architecture to analyze medical data for breast cancer detection. The system employs classification algorithms trained on the Breast Cancer Wisconsin dataset, achieving high accuracy in identifying potential malignant tissues. The solution includes an interactive Streamlit application for medical professionals.",
       image: breastCancerImg,
-      demoVideo: "", // Add your video URL here
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      demoVideo: "/videos/breast-cancer-demo.mp4", // Replace with your actual video file
       tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       features: [
         "Custom neural network for binary classification",
@@ -131,7 +128,6 @@ const ProjectDetail = () => {
       description: "Deep learning model to classify skin lesions using ResNet-152 CNN for early detection of dermatological conditions.",
       longDescription: "An innovative computer vision system designed to assist dermatologists in the early detection of skin lesions. The system uses ResNet-152 transfer learning and advanced image processing techniques to analyze dermoscopic images, providing accurate classification of various skin conditions.",
       image: skinLesionImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["Python", "TensorFlow", "Keras", "ResNet-152", "OpenCV", "NumPy"],
       features: [
         "Transfer learning with ResNet-152",
@@ -159,8 +155,7 @@ const ProjectDetail = () => {
       description: "Vision-based assistant empowering visually impaired users through object detection, OCR, currency recognition, and scene description.",
       longDescription: "A collaborative mobile application project focused on creating an AI-powered assistive technology for visually impaired individuals. The app combines computer vision with YOLOv4 and YOLOv11, natural language processing with Gemini 2.0, and voice interaction to provide real-time environmental awareness, object recognition, currency identification, and navigation assistance.",
       image: blindAppImg,
-      demoVideo: "", // Add your video URL here
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      demoVideo: "/videos/seeing-unseen-demo.mp4", // Replace with your actual video file
       tech: ["Python", "Flutter", "FastAPI", "Gemini 2.0", "LangChain", "TensorFlow", "YOLOv4", "YOLOv11"],
       features: [
         "YOLOv4 achieving 93% accuracy at 60 FPS",
@@ -187,7 +182,6 @@ const ProjectDetail = () => {
       description: "Complete e-commerce platform with user authentication, product catalog, cart, checkout system, and Google Maps integration.",
       longDescription: "A comprehensive e-commerce platform built with Laravel and PHP, featuring a complete shopping experience from product browsing to payment processing. The application includes advanced inventory management, separate user and admin panels, Google Maps integration for delivery tracking, and secure email services.",
       image: ecommerceImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "Google Maps API", "Email Services"],
       features: [
         "Separate user and admin panels",
@@ -214,8 +208,7 @@ const ProjectDetail = () => {
       description: "Comprehensive tech blog platform with user authentication, article management, and admin review workflow.",
       longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with React, TypeScript and Supabase, the platform includes role-based access control, real-time publishing pipeline, and Row Level Security policies for secure data access.",
       image: blogImg,
-      demoVideo: "", // Add your video URL here
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      demoVideo: "/videos/blog-platform-demo.mp4", // Replace with your actual video file
       tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
         "Role-based access control",
@@ -242,7 +235,6 @@ const ProjectDetail = () => {
       description: "Complete CI/CD pipeline automating build, test, and deployment workflows with monitoring and alerting.",
       longDescription: "A comprehensive DevOps pipeline built on AWS infrastructure using Terraform for infrastructure provisioning. The pipeline includes Docker containerization, Jenkins for CI/CD, Kubernetes for orchestration, and Prometheus with Grafana for real-time monitoring and alerting.",
       image: blogImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["AWS", "Docker", "DockerHub", "Jenkins", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
       features: [
         "Terraform-provisioned AWS infrastructure",
@@ -269,7 +261,6 @@ const ProjectDetail = () => {
       description: "Secure online voting platform with user authentication, candidate management, and real-time vote counting.",
       longDescription: "A secure and reliable online voting system designed for elections with features including user authentication, candidate management, real-time vote counting, and comprehensive admin dashboard for election management and monitoring.",
       image: universityImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery", "AJAX"],
       features: [
         "Secure vote casting mechanism",
@@ -296,7 +287,6 @@ const ProjectDetail = () => {
       description: "Comprehensive banking system with account management, fund transfers, and secure authentication.",
       longDescription: "A full-featured banking system application built with Java and Spring Boot, featuring account management, secure fund transfers, detailed transaction history, and JWT-based authentication for all financial operations.",
       image: ecommerceImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["Java", "Spring Boot", "MySQL", "Hibernate", "REST API", "JWT"],
       features: [
         "Secure fund transfer system",
@@ -323,7 +313,6 @@ const ProjectDetail = () => {
       description: "Elegant e-commerce platform for modest fashion including abayas with custom product catalog and secure checkout.",
       longDescription: "An elegant and culturally-sensitive e-commerce platform specializing in modest fashion. The website features beautiful product galleries with size and color variations, secure Stripe payment integration, and a smooth shopping experience built with React and Node.js.",
       image: abayaStoreImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe"],
       features: [
         "Beautiful product galleries",
@@ -350,7 +339,7 @@ const ProjectDetail = () => {
       description: "Event management platform for universities with event creation, student registration, and analytics.",
       longDescription: "A comprehensive event management system specifically designed for university environments. The platform handles event creation, student registration, scheduling, and provides detailed analytics for event organizers using React and Firebase.",
       image: universityImg,
-      demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
+      
       tech: ["React", "Firebase", "Material-UI", "Cloud Functions"],
       features: [
         "Event creation and management",
@@ -411,33 +400,13 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Demo Video or Images Gallery */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">
-            {project.demoVideo ? 'Project Demo' : 'Project Screenshots'}
-          </h2>
-          
-          {project.demoVideo ? (
+        {/* Demo Video Section */}
+        {project.demoVideo && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-center">Project Demo</h2>
             <VideoPlayer videoUrl={project.demoVideo} title={project.title} />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.demoImages?.map((img: string, index: number) => (
-                <Card key={index} className="glass-card overflow-hidden group">
-                  <CardContent className="p-0">
-                    <div className="relative h-64 overflow-hidden">
-                      <img
-                        src={img}
-                        alt={`${project.title} screenshot ${index + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Project Details Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
