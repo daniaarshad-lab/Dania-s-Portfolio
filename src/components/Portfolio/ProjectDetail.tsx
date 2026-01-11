@@ -101,6 +101,12 @@ const ProjectDetail = () => {
       longDescription: "This comprehensive AI-powered system leverages custom neural network architecture to analyze medical data for breast cancer detection. The system employs classification algorithms trained on the Breast Cancer Wisconsin dataset, achieving high accuracy in identifying potential malignant tissues. The solution includes an interactive Streamlit application for medical professionals.",
       image: breastCancerImg,
       demoVideo: "/videos/breast-cancer-demo.mp4", // Replace with your actual video file
+      demoImages: [
+        "/images/breast-cancer-1.jpg", // Replace with your actual images
+        "/images/breast-cancer-2.jpg",
+        "/images/breast-cancer-3.jpg",
+        "/images/breast-cancer-4.jpg"
+      ],
       tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       features: [
         "Custom neural network for binary classification",
@@ -209,6 +215,12 @@ const ProjectDetail = () => {
       longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with React, TypeScript and Supabase, the platform includes role-based access control, real-time publishing pipeline, and Row Level Security policies for secure data access.",
       image: blogImg,
       demoVideo: "/videos/blog-platform-demo.mp4", // Replace with your actual video file
+      demoImages: [
+        "/images/blog-1.jpg", // Replace with your actual images
+        "/images/blog-2.jpg",
+        "/images/blog-3.jpg",
+        "/images/blog-4.jpg"
+      ],
       tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
         "Role-based access control",
@@ -405,6 +417,29 @@ const ProjectDetail = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">Project Demo</h2>
             <VideoPlayer videoUrl={project.demoVideo} title={project.title} />
+          </div>
+        )}
+
+        {/* Demo Images Gallery */}
+        {project.demoImages && project.demoImages.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-center">Project Screenshots</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.demoImages.map((img: string, index: number) => (
+                <Card key={index} className="glass-card overflow-hidden group">
+                  <CardContent className="p-0">
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={img}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         )}
 
