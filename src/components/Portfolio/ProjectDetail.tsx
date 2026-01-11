@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Github, ExternalLink, Calendar, Users, Cpu, Database, Globe, Shield } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { ArrowLeft, Github, ExternalLink, Calendar, Users, Cpu, Database, Globe, Shield, Play, Pause, RotateCcw } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -19,6 +20,78 @@ const demoPlaceholder2 = "https://images.unsplash.com/photo-1461749280684-dccba6
 const demoPlaceholder3 = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80";
 const demoPlaceholder4 = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80";
 
+// Video Player Component
+const VideoPlayer = ({ videoUrl, title }: { videoUrl: string; title: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const restartVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <Card className="glass-card overflow-hidden">
+      <CardContent className="p-0">
+        <div className="relative">
+          <video
+            ref={videoRef}
+            className="w-full h-auto max-h-[600px] object-contain bg-black"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Video Controls */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={togglePlay}
+              className="bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all"
+            >
+              {isPlaying ? (
+                <><Pause className="w-4 h-4 mr-2" /> Pause</>
+              ) : (
+                <><Play className="w-4 h-4 mr-2" /> Play</>
+              )}
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={restartVideo}
+              className="bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all"
+            >
+              <RotateCcw className="w-4 h-4 mr-2" /> Restart
+            </Button>
+          </div>
+        </div>
+        <div className="p-4 text-center text-muted-foreground">
+          {title} - Demo Video
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 const ProjectDetail = () => {
   const { projectId } = useParams();
 
@@ -29,6 +102,7 @@ const ProjectDetail = () => {
       description: "Classification model for tumor detection using the Breast Cancer Wisconsin dataset with custom neural network architecture.",
       longDescription: "This comprehensive AI-powered system leverages custom neural network architecture to analyze medical data for breast cancer detection. The system employs classification algorithms trained on the Breast Cancer Wisconsin dataset, achieving high accuracy in identifying potential malignant tissues. The solution includes an interactive Streamlit application for medical professionals.",
       image: breastCancerImg,
+      demoVideo: "", // Add your video URL here
       demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       features: [
@@ -85,6 +159,7 @@ const ProjectDetail = () => {
       description: "Vision-based assistant empowering visually impaired users through object detection, OCR, currency recognition, and scene description.",
       longDescription: "A collaborative mobile application project focused on creating an AI-powered assistive technology for visually impaired individuals. The app combines computer vision with YOLOv4 and YOLOv11, natural language processing with Gemini 2.0, and voice interaction to provide real-time environmental awareness, object recognition, currency identification, and navigation assistance.",
       image: blindAppImg,
+      demoVideo: "", // Add your video URL here
       demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["Python", "Flutter", "FastAPI", "Gemini 2.0", "LangChain", "TensorFlow", "YOLOv4", "YOLOv11"],
       features: [
@@ -139,6 +214,7 @@ const ProjectDetail = () => {
       description: "Comprehensive tech blog platform with user authentication, article management, and admin review workflow.",
       longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with React, TypeScript and Supabase, the platform includes role-based access control, real-time publishing pipeline, and Row Level Security policies for secure data access.",
       image: blogImg,
+      demoVideo: "", // Add your video URL here
       demoImages: [demoPlaceholder1, demoPlaceholder2, demoPlaceholder3, demoPlaceholder4],
       tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
@@ -335,25 +411,32 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Demo Images Gallery */}
+        {/* Demo Video or Images Gallery */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Project Screenshots</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.demoImages?.map((img: string, index: number) => (
-              <Card key={index} className="glass-card overflow-hidden group">
-                <CardContent className="p-0">
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={img}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            {project.demoVideo ? 'Project Demo' : 'Project Screenshots'}
+          </h2>
+          
+          {project.demoVideo ? (
+            <VideoPlayer videoUrl={project.demoVideo} title={project.title} />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.demoImages?.map((img: string, index: number) => (
+                <Card key={index} className="glass-card overflow-hidden group">
+                  <CardContent className="p-0">
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={img}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Project Details Grid */}
