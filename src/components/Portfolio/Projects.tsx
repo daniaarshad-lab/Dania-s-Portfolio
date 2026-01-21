@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Cloud, Vote, Landmark, Shirt } from 'lucide-react';
+import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Cloud, Vote, Landmark, Shirt, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -73,6 +73,20 @@ const Projects = () => {
         "Transfer learning with ResNet-152",
         "Data augmentation for improved generalization",
         "Medical diagnostics application"
+      ]
+    },
+    {
+      title: "Islamic Teaching Website",
+      category: "Educational",
+      description: "Comprehensive Islamic education platform with interactive lessons, Quran recitation with translations, and learning management features.",
+      image: universityImg,
+      icon: BookOpen,
+      tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
+      github: "https://github.com/daniaarshad-lab/islamic-teaching",
+      highlights: [
+        "Interactive Quran recitation with translations",
+        "Prayer time calculator with notifications",
+        "Progress tracking for students"
       ]
     },
     {
@@ -182,6 +196,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Curved top shape */}
+      <div className="absolute top-0 left-0 right-0 h-32 -translate-y-1/2">
+        <svg className="w-full h-full" viewBox="0 0 1440 128" preserveAspectRatio="none">
+          <path fill="hsl(var(--primary) / 0.05)" d="M0,0L60,10.7C120,21,240,43,360,53.3C480,64,600,64,720,53.3C840,43,960,21,1080,16C1200,11,1320,21,1380,26.7L1440,32L1440,128L1380,128C1320,128,1200,128,1080,128C960,128,840,128,720,128C600,128,480,128,360,128C240,128,120,128,60,128L0,128Z" />
+        </svg>
+      </div>
+
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text animate-fade-in">
@@ -199,17 +220,23 @@ const Projects = () => {
             const isVisible = visibleProjects.includes(index);
             
             return (
-              <Card
+              <div 
                 key={index}
                 data-index={index}
-                className={`project-card glass-card group overflow-hidden transition-all duration-500 ease-out hover:scale-[1.03] hover:shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.25)] ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ 
-                  transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
-                  transitionProperty: 'opacity, transform, box-shadow'
-                }}
+                className="project-card group relative"
               >
+                {/* Gradient border on hover */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                
+                <Card
+                  className={`relative glass-card rounded-3xl overflow-hidden transition-all duration-500 ease-out bg-background/80 backdrop-blur-xl border-0 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ 
+                    transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
+                    transitionProperty: 'opacity, transform, box-shadow'
+                  }}
+                >
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
@@ -315,13 +342,15 @@ const Projects = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
             );
           })}
         </div>
         
-        {/* Background decoration */}
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        {/* Background decoration - organic blob shapes */}
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary/10 to-primary-glow/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-radial from-primary/5 to-transparent rounded-full blur-2xl"></div>
       </div>
     </section>
   );

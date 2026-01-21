@@ -94,83 +94,97 @@ const About = () => {
             </CardContent>
           </Card>
 
-          {/* Technical Skills Grid */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-center mb-6">Technical Skills</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Technical Skills Grid - Modern Smooth Boxes */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-center mb-8 glow-text">Technical Skills</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {technicalSkills.map((skillGroup, index) => {
                 const IconComponent = skillGroup.icon;
                 return (
-                  <Card 
+                  <div 
                     key={index} 
-                    className="glass-card hover-glow animate-fade-in" 
+                    className="group relative animate-fade-in" 
                     style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                   >
-                    <CardContent className="p-5">
-                      <div className="flex items-center mb-3">
-                        <div className="w-9 h-9 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                          <IconComponent className="w-4 h-4 text-primary" />
+                    {/* Gradient border effect */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                    
+                    <Card className="relative glass-card rounded-3xl overflow-hidden border-0 bg-background/80 backdrop-blur-xl">
+                      <CardContent className="p-6">
+                        {/* Icon and category header */}
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary-glow/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                            <IconComponent className="w-7 h-7 text-primary" />
+                          </div>
+                          <h4 className="text-lg font-bold text-foreground">{skillGroup.category}</h4>
                         </div>
-                        <h4 className="font-semibold">{skillGroup.category}</h4>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {skillGroup.items.map((skill, skillIndex) => (
-                          <span
-                            key={skillIndex}
-                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
+                        
+                        {/* Skills pills */}
+                        <div className="flex flex-wrap gap-2">
+                          {skillGroup.items.map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className="px-4 py-2 bg-gradient-to-r from-primary/15 to-primary-glow/10 text-foreground/90 text-sm rounded-full border border-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 cursor-default"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
                 );
               })}
             </div>
           </div>
 
           {/* Other Skills & Documentation */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="glass-card hover-glow animate-fade-in" style={{ animationDelay: '0.7s' }}>
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <FileText className="w-5 h-5 text-primary" />
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.7s' }}>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary-glow/50 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+              <Card className="relative glass-card rounded-3xl overflow-hidden border-0 bg-background/80 backdrop-blur-xl h-full">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary-glow/20 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-primary/20">
+                      <FileText className="w-7 h-7 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold">Documentation & Design</h4>
                   </div>
-                  <h4 className="text-lg font-semibold">Documentation & Design</h4>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {otherSkills.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1.5 bg-background/50 border border-primary/20 text-muted-foreground text-sm rounded-full"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="flex flex-wrap gap-3">
+                    {otherSkills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-4 py-2 bg-gradient-to-r from-background/80 to-background/60 border border-primary/30 text-foreground/80 text-sm rounded-full hover:border-primary/60 hover:scale-105 transition-all duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
-            <Card className="glass-card hover-glow animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <BookOpen className="w-5 h-5 text-primary" />
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary-glow/50 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+              <Card className="relative glass-card rounded-3xl overflow-hidden border-0 bg-background/80 backdrop-blur-xl h-full">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary-glow/20 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-primary/20">
+                      <BookOpen className="w-7 h-7 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold">Interpersonal Skills</h4>
                   </div>
-                  <h4 className="text-lg font-semibold">Interpersonal Skills</h4>
-                </div>
-                <ul className="space-y-2">
-                  {interpersonalSkills.map((skill, index) => (
-                    <li key={index} className="text-sm text-muted-foreground flex items-start">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                  <ul className="space-y-3">
+                    {interpersonalSkills.map((skill, index) => (
+                      <li key={index} className="text-sm text-muted-foreground flex items-start group/item hover:text-foreground transition-colors">
+                        <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary-glow rounded-full mr-3 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform"></div>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
 

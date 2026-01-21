@@ -53,7 +53,14 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="experience" className="py-20 relative">
+      {/* Curved decorative shape */}
+      <div className="absolute top-0 left-0 right-0 overflow-hidden -translate-y-1/2">
+        <svg className="w-full h-24" viewBox="0 0 1440 96" preserveAspectRatio="none">
+          <path fill="hsl(var(--primary) / 0.03)" d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,64C672,75,768,85,864,80C960,75,1056,53,1152,42.7C1248,32,1344,32,1392,32L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
+        </svg>
+      </div>
+
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text animate-fade-in">
@@ -68,11 +75,15 @@ const Experience = () => {
           {experiences.map((exp, index) => {
             const IconComponent = exp.icon;
             return (
-              <Card 
+              <div 
                 key={index}
-                className="glass-card hover-glow animate-slide-up group"
+                className="group relative animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
+                {/* Gradient border on hover */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                
+                <Card className="relative glass-card rounded-3xl overflow-hidden border-0 bg-background/80 backdrop-blur-xl">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start gap-6">
                     {/* Icon */}
@@ -125,6 +136,7 @@ const Experience = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
             );
           })}
 

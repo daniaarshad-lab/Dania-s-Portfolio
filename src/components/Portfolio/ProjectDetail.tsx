@@ -371,6 +371,39 @@ const ProjectDetail = () => {
       duration: "4 months",
       team: "Solo Project",
       status: "Completed"
+    },
+    'islamic-teaching-website': {
+      title: "Islamic Teaching Website",
+      category: "Educational Web Application",
+      description: "Comprehensive Islamic education platform with interactive lessons, Quran recitation, and learning management features.",
+      longDescription: "A beautifully designed Islamic education platform that provides comprehensive religious learning resources. The website includes Quran recitation with translation, Hadith collections, prayer time calculations, interactive quizzes, and progress tracking for students. Built with modern web technologies to create an engaging and accessible learning experience.",
+      image: universityImg,
+      demoVideo: "/videos/islamic-teaching-demo.mp4", // Replace with your actual video file
+      demoImages: [
+        "/images/islamic-1.jpg", // Replace with your actual images
+        "/images/islamic-2.jpg",
+        "/images/islamic-3.jpg",
+        "/images/islamic-4.jpg"
+      ],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
+      features: [
+        "Interactive Quran recitation with translations",
+        "Hadith collection and search functionality",
+        "Prayer time calculator with notifications",
+        "Progress tracking for students",
+        "Interactive quizzes and assessments",
+        "Multi-language support"
+      ],
+      challenges: [
+        "Accurate Arabic text rendering and RTL support",
+        "Implementing prayer time calculations for global locations",
+        "Creating an intuitive learning management system",
+        "Ensuring accessibility across all devices"
+      ],
+      github: "https://github.com/daniaarshad-lab/islamic-teaching",
+      duration: "4 months",
+      team: "Solo Project",
+      status: "Completed"
     }
   };
 
