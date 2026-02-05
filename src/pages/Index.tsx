@@ -22,18 +22,31 @@ const Index = () => {
       </div>
 
       {/* Curved section divider after Hero */}
-      <div className="relative h-20 -mt-10 overflow-hidden">
-        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 80" preserveAspectRatio="none">
-          <path fill="hsl(var(--primary) / 0.04)" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" />
+      <div className="relative h-24 -mt-6">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 100" preserveAspectRatio="none">
+          <path 
+            fill="hsl(var(--primary))" 
+            fillOpacity="0.15"
+            d="M0,60 C200,100 400,20 720,50 C1040,80 1240,30 1440,60 L1440,100 L0,100 Z" 
+          />
+          <path 
+            fill="hsl(var(--primary))" 
+            fillOpacity="0.08"
+            d="M0,70 C300,100 600,40 900,70 C1200,100 1350,50 1440,70 L1440,100 L0,100 Z" 
+          />
         </svg>
       </div>
 
       <About />
 
       {/* Curved section divider after About */}
-      <div className="relative h-16 -mt-8 overflow-hidden">
-        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 64" preserveAspectRatio="none">
-          <path fill="hsl(var(--primary) / 0.03)" d="M0,32 C480,64 960,0 1440,32 L1440,64 L0,64 Z" />
+      <div className="relative h-20 -mt-4">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path 
+            fill="hsl(var(--primary))" 
+            fillOpacity="0.12"
+            d="M0,40 C360,80 720,10 1080,50 C1260,70 1380,40 1440,30 L1440,80 L0,80 Z" 
+          />
         </svg>
       </div>
 
