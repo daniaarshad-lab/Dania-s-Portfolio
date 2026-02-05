@@ -39,18 +39,19 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Professional Signature */}
+          {/* Logo - Animated Signature Style */}
           <button
             onClick={() => scrollToSection('#home')}
-            className="group relative hover:scale-105 transition-transform flex items-center gap-1"
+            className="group relative hover:scale-105 transition-transform"
           >
-            <span className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+            <span className="text-2xl md:text-3xl font-semibold italic tracking-wide text-primary group-hover:text-primary-glow transition-colors duration-300" style={{ fontFamily: 'Georgia, serif' }}>
               D
             </span>
-            <span className="text-2xl md:text-3xl font-light tracking-tight bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent -ml-0.5">
+            <span className="text-2xl md:text-3xl font-light italic tracking-wide text-primary-glow group-hover:text-primary transition-colors duration-300 -ml-1" style={{ fontFamily: 'Georgia, serif' }}>
               A
             </span>
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-full opacity-60" />
+            {/* Animated underline */}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-glow rounded-full group-hover:w-full transition-all duration-500" />
           </button>
 
           {/* Desktop Navigation */}
