@@ -39,46 +39,18 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Signature Style */}
+          {/* Logo - Professional Signature */}
           <button
             onClick={() => scrollToSection('#home')}
-            className="group relative hover:scale-105 transition-transform"
+            className="group relative hover:scale-105 transition-transform flex items-center gap-1"
           >
-            <svg width="56" height="40" viewBox="0 0 56 40" className="overflow-visible">
-              {/* D letter - elegant signature curve */}
-              <path
-                d="M6 8 C6 8, 6 32, 6 32 M6 8 C6 8, 18 6, 24 12 C30 18, 30 24, 24 30 C18 36, 6 32, 6 32"
-                stroke="url(#logoGrad)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-              {/* A letter - handwritten signature style */}
-              <path
-                d="M34 32 Q40 8, 46 32 M37 24 L45 24"
-                stroke="url(#logoGrad)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-              {/* Signature underline flourish */}
-              <path
-                d="M4 36 Q28 42, 52 34"
-                stroke="url(#logoGrad)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                fill="none"
-                opacity="0.6"
-              />
-              <defs>
-                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" />
-                  <stop offset="100%" stopColor="hsl(var(--primary-glow))" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <span className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+              D
+            </span>
+            <span className="text-2xl md:text-3xl font-light tracking-tight bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent -ml-0.5">
+              A
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-full opacity-60" />
           </button>
 
           {/* Desktop Navigation */}
