@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Cloud, Vote, Landmark, Shirt, BookOpen } from 'lucide-react';
+import { Github, ExternalLink, Brain, Heart, Eye, ShoppingCart, FileText, Cloud, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -118,45 +118,17 @@ const Projects = () => {
       ]
     },
     {
-      title: "Online Voting System",
+      title: "VPN Dashboard - User Activity Monitor",
       category: "Full Stack",
-      description: "Secure online voting platform with user authentication, candidate management, real-time vote counting, and admin dashboard for election management.",
-      image: universityImg,
-      icon: Vote,
-      tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery", "AJAX"],
-      github: "https://github.com/daniaarshad-lab/voting-system",
-      highlights: [
-        "Secure vote casting mechanism",
-        "Real-time result tracking",
-        "Admin dashboard for election control"
-      ]
-    },
-    {
-      title: "Banking System Application",
-      category: "Full Stack",
-      description: "Comprehensive banking system with account management, fund transfers, transaction history, and secure authentication for financial operations.",
+      description: "Comprehensive VPN dashboard for monitoring user activity, bandwidth usage, connection logs, and real-time analytics with admin controls.",
       image: ecommerceImg,
-      icon: Landmark,
-      tech: ["Java", "Spring Boot", "MySQL", "Hibernate", "REST API", "JWT"],
-      github: "https://github.com/daniaarshad-lab/banking-system",
+      icon: Eye,
+      tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Chart.js", "WebSocket"],
+      github: "https://github.com/daniaarshad-lab/vpn-dashboard",
       highlights: [
-        "Secure fund transfer system",
-        "Transaction history tracking",
-        "Account balance management"
-      ]
-    },
-    {
-      title: "Modest Wear E-Commerce Platform",
-      category: "Full Stack",
-      description: "Elegant e-commerce platform for modest fashion including abayas with custom product catalog, secure checkout, and beautiful UI design.",
-      image: abayaStoreImg,
-      icon: Shirt,
-      tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe"],
-      github: "https://github.com/daniaarshad-lab/modest-wear",
-      highlights: [
-        "Beautiful product galleries",
-        "Size and color variations",
-        "Secure payment integration"
+        "Real-time user activity monitoring",
+        "Bandwidth usage analytics",
+        "Connection logs and session management"
       ]
     },
     {
@@ -185,7 +157,7 @@ const Projects = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     const projectElements = document.querySelectorAll('.project-card');
@@ -347,10 +319,10 @@ const Projects = () => {
           })}
         </div>
         
-        {/* Background decoration - organic blob shapes */}
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary/10 to-primary-glow/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-radial from-primary/5 to-transparent rounded-full blur-2xl"></div>
+        {/* Background decoration - static blob shapes */}
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary/8 to-primary-glow/3 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tr from-primary/8 to-primary-glow/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-radial from-primary/4 to-transparent rounded-full blur-2xl"></div>
       </div>
     </section>
   );

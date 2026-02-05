@@ -11,16 +11,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Decorative curved shapes */}
+      {/* Decorative curved shapes - optimized without animations */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
         {/* Top right blob */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-3xl animate-pulse" />
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/15 via-primary/5 to-transparent blur-3xl" />
         
         {/* Bottom left blob */}
-        <div className="absolute -bottom-60 -left-40 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-primary/15 via-primary/5 to-transparent blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute -bottom-60 -left-40 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent blur-3xl" />
         
         {/* Middle floating orb */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-radial from-primary/8 to-transparent blur-3xl" />
         
         {/* Curved wave shape at bottom */}
         <svg className="absolute bottom-0 left-0 w-full h-32 opacity-30" viewBox="0 0 1440 320" preserveAspectRatio="none">

@@ -11,7 +11,6 @@ const Navbar = () => {
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
   ];
 
   useEffect(() => {
@@ -40,12 +39,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo - Signature Style */}
           <button
             onClick={() => scrollToSection('#home')}
-            className="text-xl md:text-2xl font-bold glow-text hover:scale-105 transition-transform"
+            className="group relative hover:scale-105 transition-transform"
           >
-            DA
+            <span className="text-2xl md:text-3xl font-script italic tracking-wide bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent font-bold" style={{ fontFamily: "'Brush Script MT', 'Segoe Script', cursive" }}>
+              DA
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-primary-glow scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
           </button>
 
           {/* Desktop Navigation */}
