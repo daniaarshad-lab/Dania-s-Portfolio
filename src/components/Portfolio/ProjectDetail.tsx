@@ -12,7 +12,114 @@ import blindAppImg from '@/assets/blind-app-project.jpg';
 import ecommerceImg from '@/assets/ecommerce-project.jpg';
 import blogImg from '@/assets/blog-project.jpg';
 import universityImg from '@/assets/university-project.jpg';
-import abayaStoreImg from '@/assets/abaya-store-project.jpg';
+import CICDImg from '@/assets/CICD-project.jpg';
+// import abayaStoreImg from '@/assets/abaya-store-project.jpg';
+import VPNmonitoringImg from '@/assets/VPN-monitoring-project.jpg';
+import VPNAPPImg from '@/assets/VPN-APP-project.jpg';
+import AhmedDebbaghImg from '@/assets/Ahmed-Debbagh-project.jpg';
+
+
+
+// E-commerce demo images
+import ecommerceDemo1 from '@/assets/ecommerce/1.png';
+import ecommerceDemo2 from '@/assets/ecommerce/2.png';
+import ecommerceDemo3 from '@/assets/ecommerce/3.png';
+import ecommerceDemo4 from '@/assets/ecommerce/4.png';
+import ecommerceDemo5 from '@/assets/ecommerce/5.png';
+import ecommerceDemo6 from '@/assets/ecommerce/6.png';
+import ecommerceDemo7 from '@/assets/ecommerce/7.png';
+import ecommerceDemo8 from '@/assets/ecommerce/8.png';
+import ecommerceDemo9 from '@/assets/ecommerce/9.png';
+import ecommerceDemo10 from '@/assets/ecommerce/10.png';
+import ecommerceDemo11 from '@/assets/ecommerce/11.png';
+import ecommerceDemo12 from '@/assets/ecommerce/12.png';
+
+// University Event Management demo images
+import uniDemo1 from '@/assets/university-events/1.png';
+import uniDemo2 from '@/assets/university-events/2.png';
+import uniDemo3 from '@/assets/university-events/3.png';
+import uniDemo4 from '@/assets/university-events/4.png';
+import uniDemo5 from '@/assets/university-events/5.png';
+import uniDemo6 from '@/assets/university-events/6.png';
+import uniDemo7 from '@/assets/university-events/7.png';
+import uniDemo8 from '@/assets/university-events/8.png';
+import uniDemo9 from '@/assets/university-events/9.png';
+import uniDemo10 from '@/assets/university-events/10.png';
+import uniDemo11 from '@/assets/university-events/11.png';
+import uniDemo12 from '@/assets/university-events/12.png';
+// Blog project demo images
+import blogDemo1 from '@/assets/blog-platform/1.png';
+import blogDemo2 from '@/assets/blog-platform/2.png';
+import blogDemo3 from '@/assets/blog-platform/3.png';
+import blogDemo4 from '@/assets/blog-platform/4.png';
+import blogDemo5 from '@/assets/blog-platform/5.png';
+import blogDemo6 from '@/assets/blog-platform/6.png';
+import blogDemo7 from '@/assets/blog-platform/7.png';
+import blogDemo8 from '@/assets/blog-platform/8.png';
+import blogDemo9 from '@/assets/blog-platform/9.png';
+// Islamic Teaching Site demo images
+import islamicDemo1 from '@/assets/islamic-teaching/demo1.png';
+import islamicDemo2 from '@/assets/islamic-teaching/demo2.png';
+import islamicDemo3 from '@/assets/islamic-teaching/demo3.png';
+import islamicDemo4 from '@/assets/islamic-teaching/demo4.png';
+import islamicDemo5 from '@/assets/islamic-teaching/demo5.png';
+import islamicDemo6 from '@/assets/islamic-teaching/demo6.png';
+import islamicDemo7 from '@/assets/islamic-teaching/demo7.png';
+import islamicDemo8 from '@/assets/islamic-teaching/demo8.png';
+import islamicDemo9 from '@/assets/islamic-teaching/demo9.png';
+import islamicDemo10 from '@/assets/islamic-teaching/demo10.png';
+import islamicDemo11 from '@/assets/islamic-teaching/demo11.png';
+import islamicDemo12 from '@/assets/islamic-teaching/demo12.png';
+import islamicDemo13 from '@/assets/islamic-teaching/demo13.png';
+// Breast Cancer Detection demo images
+import bcDemo1 from '@/assets/breast-cancer/1.jpg';
+import bcDemo2 from '@/assets/breast-cancer/2.jpg';
+import bcDemo3 from '@/assets/breast-cancer/3.jpg';
+import bcDemo4 from '@/assets/breast-cancer/4.jpg';
+import bcDemo5 from '@/assets/breast-cancer/5.jpg';
+import bcDemo6 from '@/assets/breast-cancer/6.jpg';
+import bcDemo7 from '@/assets/breast-cancer/7.jpg';
+import bcDemo8 from '@/assets/breast-cancer/8.jpg';
+import bcDemo9 from '@/assets/breast-cancer/9.jpg';
+// Skin Lesion Detection demo images
+import skinDemo1 from '@/assets/skin-lesion/1.jpg';
+import skinDemo2 from '@/assets/skin-lesion/2.jpg';
+import skinDemo3 from '@/assets/skin-lesion/3.jpg';
+import skinDemo4 from '@/assets/skin-lesion/4.jpg';
+import skinDemo5 from '@/assets/skin-lesion/5.jpg';
+import skinDemo6 from '@/assets/skin-lesion/6.jpg';
+// VPN project demo images
+import vpnDemo1 from '@/assets/vpn/1.jpg';
+import vpnDemo2 from '@/assets/vpn/2.jpg';
+import vpnDemo3 from '@/assets/vpn/3.jpg';
+import vpnDemo4 from '@/assets/vpn/4.jpg';
+import vpnDemo5 from '@/assets/vpn/5.jpg';
+import vpnDemo6 from '@/assets/vpn/6.jpg';
+import vpnDemo7 from '@/assets/vpn/7.jpg';
+
+// VPNAPP project demo images
+import vpnappDemo1 from '@/assets/VpnAPP/1.jpg';
+import vpnappDemo2 from '@/assets/VpnAPP/2.jpg';
+import vpnappDemo3 from '@/assets/VpnAPP/3.jpg';
+import vpnappDemo4 from '@/assets/VpnAPP/4.jpg';
+import vpnappDemo5 from '@/assets/VpnAPP/5.jpg';
+import vpnappDemo6 from '@/assets/VpnAPP/6.jpg';
+
+// CICD project demo images
+import CICDDemo1 from '@/assets/CICD/1.jpg';
+import CICDDemo2 from '@/assets/CICD/2.jpg';
+import CICDDemo3 from '@/assets/CICD/3.jpg';
+import CICDDemo4 from '@/assets/CICD/4.jpg';
+import CICDDemo5 from '@/assets/CICD/5.jpg';
+import CICDDemo6 from '@/assets/CICD/6.jpg';
+import CICDDemo7 from '@/assets/CICD/7.jpg';
+import CICDDemo8 from '@/assets/CICD/8.jpg';
+import CICDDemo9 from '@/assets/CICD/9.jpg';
+import CICDDemo10 from '@/assets/CICD/10.jpg';
+import CICDDemo11 from '@/assets/CICD/11.jpg';
+import CICDDemo12 from '@/assets/CICD/12.jpg';
+import CICDDemo13 from '@/assets/CICD/13.jpg';
+
 
 // To add your demo videos:
 // 1. Place your .mp4 files in the public/videos/ folder
@@ -51,7 +158,8 @@ const VideoPlayer = ({ videoUrl, title }: { videoUrl: string; title: string }) =
             className="w-full h-auto max-h-[600px] object-contain bg-black"
             autoPlay
             loop
-            muted
+            // muted
+            controls
             playsInline
           >
             <source src={videoUrl} type="video/mp4" />
@@ -102,10 +210,7 @@ const ProjectDetail = () => {
       image: breastCancerImg,
       demoVideo: "/videos/breast-cancer-demo.mp4", // Replace with your actual video file
       demoImages: [
-        "/images/breast-cancer-1.jpg", // Replace with your actual images
-        "/images/breast-cancer-2.jpg",
-        "/images/breast-cancer-3.jpg",
-        "/images/breast-cancer-4.jpg"
+       bcDemo1, bcDemo2, bcDemo3, bcDemo4, bcDemo5, bcDemo6, bcDemo7, bcDemo8, bcDemo9
       ],
       tech: ["Python", "Google Colab", "Streamlit", "Matplotlib", "NumPy", "Pandas"],
       features: [
@@ -122,18 +227,22 @@ const ProjectDetail = () => {
         "Creating an intuitive interface for medical professionals",
         "Optimizing neural network architecture"
       ],
-      github: "https://github.com/daniaarshad-lab/breast-cancer-detection",
-      colab: "https://colab.research.google.com/",
-      duration: "3 months",
+       github: "https://github.com/daniaarshad-lab/Breast-Cancer-Classification",
+      colab: "https://colab.research.google.com/drive/1vDenE1sYLPl3AdgcMYYzsBvlcm5S5WtD?usp=sharing",
+      // duration: "3 months",
       team: "Solo Project",
       status: "Completed"
     },
+
     'skin-lesion-detection-system': {
       title: "Skin Lesion Detection System",
       category: "AI/ML Dermatology",
       description: "Deep learning model to classify skin lesions using ResNet-152 CNN for early detection of dermatological conditions.",
       longDescription: "An innovative computer vision system designed to assist dermatologists in the early detection of skin lesions. The system uses ResNet-152 transfer learning and advanced image processing techniques to analyze dermoscopic images, providing accurate classification of various skin conditions.",
       image: skinLesionImg,
+      demoImages: [
+      skinDemo1, skinDemo2, skinDemo3, skinDemo4, skinDemo5, skinDemo6
+      ],
       tech: ["Python", "TensorFlow", "Keras", "ResNet-152", "OpenCV", "NumPy"],
       features: [
         "Transfer learning with ResNet-152",
@@ -149,19 +258,20 @@ const ProjectDetail = () => {
         "Creating an intuitive interface for medical professionals",
         "Ensuring robust performance across different skin types"
       ],
-      github: "https://github.com/daniaarshad-lab/skin-lesion-detection",
-      colab: "https://colab.research.google.com/",
-      duration: "4 months",
+      github: "https://github.com/daniaarshad-lab/Skin-Lesion-Detection-System",
+      colab: "https://colab.research.google.com/drive/1g9szkhb_DZ_gYVH3E92-2Zep5spaTLFK?usp=sharing",
+      // duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     },
+
     'seeing-the-unseen---ai-assistant-for-visually-impaired': {
       title: "Seeing The Unseen - AI Assistant for Visually Impaired",
       category: "AI/ML Accessibility",
       description: "Vision-based assistant empowering visually impaired users through object detection, OCR, currency recognition, and scene description.",
       longDescription: "A collaborative mobile application project focused on creating an AI-powered assistive technology for visually impaired individuals. The app combines computer vision with YOLOv4 and YOLOv11, natural language processing with Gemini 2.0, and voice interaction to provide real-time environmental awareness, object recognition, currency identification, and navigation assistance.",
       image: blindAppImg,
-      demoVideo: "/videos/seeing-unseen-demo.mp4", // Replace with your actual video file
+      demoVideo: "/videos/SeeingTheUnseen.mp4", // Replace with your actual video file
       tech: ["Python", "Flutter", "FastAPI", "Gemini 2.0", "LangChain", "TensorFlow", "YOLOv4", "YOLOv11"],
       features: [
         "YOLOv4 achieving 93% accuracy at 60 FPS",
@@ -178,16 +288,18 @@ const ProjectDetail = () => {
         "Implementing reliable voice interaction"
       ],
       github: "https://github.com/daniaarshad-lab/seeing-the-unseen",
-      duration: "8 months",
-      team: "4 members",
-      status: "In Development"
+      // duration: "8 months",
+      team: "2 members",
+      status: "Completed"
     },
+
     'full-stack-e-commerce-platform': {
       title: "Full Stack E-Commerce Platform",
       category: "Full-Stack Web Application",
       description: "Complete e-commerce platform with user authentication, product catalog, cart, checkout system, and Google Maps integration.",
       longDescription: "A comprehensive e-commerce platform built with Laravel and PHP, featuring a complete shopping experience from product browsing to payment processing. The application includes advanced inventory management, separate user and admin panels, Google Maps integration for delivery tracking, and secure email services.",
       image: ecommerceImg,
+      demoImages: [ecommerceDemo1, ecommerceDemo2, ecommerceDemo3, ecommerceDemo4, ecommerceDemo5, ecommerceDemo6, ecommerceDemo7, ecommerceDemo8, ecommerceDemo9, ecommerceDemo10, ecommerceDemo11, ecommerceDemo12],
       tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "Google Maps API", "Email Services"],
       features: [
         "Separate user and admin panels",
@@ -203,23 +315,21 @@ const ProjectDetail = () => {
         "Ensuring scalable database design",
         "Creating responsive and intuitive UI"
       ],
-      github: "https://github.com/daniaarshad-lab/ecommerce-platform",
-      duration: "5 months",
+      github: "https://github.com/daniaarshad-lab/Full-Stack-E-Commerce-Website",
+      // duration: "5 months",
       team: "Solo Project",
       status: "Completed"
     },
+
     'full-stack-blog-publishing-platform': {
       title: "Full Stack Blog Publishing Platform",
       category: "Full-Stack Web Application",
       description: "Comprehensive tech blog platform with user authentication, article management, and admin review workflow.",
       longDescription: "A feature-rich blog publishing platform designed for modern content creators. Built with React, TypeScript and Supabase, the platform includes role-based access control, real-time publishing pipeline, and Row Level Security policies for secure data access.",
       image: blogImg,
-      demoVideo: "/videos/blog-platform-demo.mp4", // Replace with your actual video file
+     demoVideo: "/videos/blog-platform-demo.mp4", // Replace with your actual video file
       demoImages: [
-        "/images/blog-1.jpg", // Replace with your actual images
-        "/images/blog-2.jpg",
-        "/images/blog-3.jpg",
-        "/images/blog-4.jpg"
+        blogDemo1, blogDemo2, blogDemo3, blogDemo4,blogDemo5, blogDemo6, blogDemo7, blogDemo8,blogDemo9
       ],
       tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
@@ -236,17 +346,21 @@ const ProjectDetail = () => {
         "Managing user-generated content securely",
         "Optimizing performance for large content volumes"
       ],
-      github: "https://github.com/daniaarshad-lab/blog-platform",
-      duration: "4 months",
+      github: "https://github.com/daniaarshad-lab/blogpostwebsite",
+      // duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     },
+
     'end-to-end-devops-cicd-pipeline-on-aws': {
       title: "End-to-End DevOps CI/CD Pipeline on AWS",
       category: "DevOps",
       description: "Complete CI/CD pipeline automating build, test, and deployment workflows with monitoring and alerting.",
       longDescription: "A comprehensive DevOps pipeline built on AWS infrastructure using Terraform for infrastructure provisioning. The pipeline includes Docker containerization, Jenkins for CI/CD, Kubernetes for orchestration, and Prometheus with Grafana for real-time monitoring and alerting.",
-      image: blogImg,
+      image: CICDImg,
+       demoImages: [
+       CICDDemo1, CICDDemo2, CICDDemo3, CICDDemo4, CICDDemo5, CICDDemo6, CICDDemo7, CICDDemo8, CICDDemo9, CICDDemo10, CICDDemo11, CICDDemo12, CICDDemo13
+      ],
       tech: ["AWS", "Docker", "DockerHub", "Jenkins", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
       features: [
         "Terraform-provisioned AWS infrastructure",
@@ -258,150 +372,126 @@ const ProjectDetail = () => {
       ],
       challenges: [
         "Managing complex infrastructure as code",
-        "Ensuring zero-downtime deployments",
+        "Ensuring low downtime deployments",
         "Implementing comprehensive monitoring",
         "Handling security across the pipeline"
       ],
-      github: "https://github.com/daniaarshad-lab/devops-cicd-pipeline",
-      duration: "3 months",
+      github: "https://github.com/daniaarshad-lab/CI-CD-Pipeline-of-MERN-Ecommerce",
+      // duration: "3 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'online-voting-system': {
-      title: "Online Voting System",
-      category: "Full-Stack Web Application",
-      description: "Secure online voting platform with user authentication, candidate management, and real-time vote counting.",
-      longDescription: "A secure and reliable online voting system designed for elections with features including user authentication, candidate management, real-time vote counting, and comprehensive admin dashboard for election management and monitoring.",
-      image: universityImg,
-      tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery", "AJAX"],
-      features: [
-        "Secure vote casting mechanism",
-        "Real-time result tracking",
-        "Admin dashboard for election control",
-        "User authentication and verification",
-        "Candidate management system",
-        "Audit trail for transparency"
+
+   'vpn-app': {
+      title: "Vpn App",
+      category: "Cloud & Full Stack App",
+      description: "A multi-protocol VPN client (OpenVPN, IKEv2, L2TP, IKEv3, IPsec) with multi-country servers, and a fully AWS Cloud–deployed backend.",
+      longDescription: "The system captures and logs VPN users’ domain-level browsing activity using DNS queries, recording which domains are accessed without capturing full URLs, ensuring privacy over HTTPS traffic. Each DNS query is linked to the user’s VPN IP and real public IP, enabling accurate user activity mapping. Logs are organized by date for detailed day-wise analysis and also aggregated overall for summary reporting. This allows administrators to monitor browsing patterns, troubleshoot issues, and maintain accountability across the VPN network.",
+      image: VPNAPPImg,
+      demoImages: [
+       vpnappDemo1, vpnappDemo2, vpnappDemo3, vpnappDemo4, vpnappDemo5, vpnappDemo6
       ],
-      challenges: [
-        "Ensuring vote security and integrity",
-        "Preventing duplicate voting",
-        "Real-time vote counting accuracy",
-        "Scalability for large elections"
-      ],
-      github: "https://github.com/daniaarshad-lab/voting-system",
-      duration: "2 months",
-      team: "Solo Project",
+     tech: ["Flutter", "Dartt", "AWS Cloud"],
+     features: [
+       "Supports Android + IOS ",
+       "Supports multiple VPN protocols including OpenVPN, IKEv2, L2TP, IKEv3, and IPsec",
+       "Connect to servers across multiple countries with a single click",
+       "Real-time bandwidth, data usage, and connection statistics display"
+],
+     challenges: [
+      "Ensuring seamless support for multiple VPN protocols simultaneously",
+      "Handling connections across multiple countries without latency or drops",
+      "Accurately tracking bandwidth and usage data in real-time",
+      "Maintaining privacy and security while logging connection activity"
+],
+
+      github: "https://github.com/daniaarshad-lab/VPN-APP-OpenVpn-IKEV2-L2TP-",
+      // duration: "3 months",
+      team: "2 Members",
       status: "Completed"
     },
-    'banking-system-application': {
-      title: "Banking System Application",
-      category: "Full-Stack Application",
-      description: "Comprehensive banking system with account management, fund transfers, and secure authentication.",
-      longDescription: "A full-featured banking system application built with Java and Spring Boot, featuring account management, secure fund transfers, detailed transaction history, and JWT-based authentication for all financial operations.",
-      image: ecommerceImg,
-      tech: ["Java", "Spring Boot", "MySQL", "Hibernate", "REST API", "JWT"],
-      features: [
-        "Secure fund transfer system",
-        "Transaction history tracking",
-        "Account balance management",
-        "JWT-based authentication",
-        "Account creation and management",
-        "Statement generation"
+
+    'vpn-user-activity-monitoring-dashboard': {
+      title: "VPN User Activity Monitoring Dashboard",
+      category: "Web Application",
+      description: "Logged VPN users’ domain-level browsing activity by date and in total, linking queries to their VPN and real IPs.",
+      longDescription: "The system captures and logs VPN users’ domain-level browsing activity using DNS queries, recording which domains are accessed without capturing full URLs, ensuring privacy over HTTPS traffic. Each DNS query is linked to the user’s VPN IP and real public IP, enabling accurate user activity mapping. Logs are organized by date for detailed day-wise analysis and also aggregated overall for summary reporting. This allows administrators to monitor browsing patterns, troubleshoot issues, and maintain accountability across the VPN network.",
+      image: VPNmonitoringImg,
+      demoVideo: "/videos/vpn-frontend.mp4", // Replace with your actual video file
+      demoImages: [
+       vpnDemo1, vpnDemo2, vpnDemo3, vpnDemo4, vpnDemo5, vpnDemo6, vpnDemo7
       ],
-      challenges: [
-        "Implementing secure financial transactions",
-        "Ensuring data consistency",
-        "Building robust authentication",
-        "Handling concurrent transactions"
-      ],
-      github: "https://github.com/daniaarshad-lab/banking-system",
-      duration: "3 months",
-      team: "Solo Project",
-      status: "Completed"
-    },
-    'modest-wear-e-commerce-platform': {
-      title: "Modest Wear E-Commerce Platform",
-      category: "E-Commerce Web Application",
-      description: "Elegant e-commerce platform for modest fashion including abayas with custom product catalog and secure checkout.",
-      longDescription: "An elegant and culturally-sensitive e-commerce platform specializing in modest fashion. The website features beautiful product galleries with size and color variations, secure Stripe payment integration, and a smooth shopping experience built with React and Node.js.",
-      image: abayaStoreImg,
       tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe"],
       features: [
-        "Beautiful product galleries",
-        "Size and color variations",
-        "Secure payment integration",
-        "Customer account management",
-        "Order tracking system",
-        "Wishlist functionality"
+        "Real-time VPN connection logging",
+         "User ↔ VPN IP ↔ real IP mapping",
+         "DNS-based domain activity tracking",
+         "Geolocation of VPN users",
+         "Time-stamped event logging",
+         "Web dashboard and API access"
       ],
       challenges: [
-        "Creating culturally appropriate design",
-        "Managing complex product variations",
-        "Implementing international payment processing",
-        "Optimizing images for fast loading"
+        "Accurately linking VPN IPs to real IPs",
+        "Capturing DNS activity without full URLs",
+        "Handling privacy and security concerns",
+        "Displaying large datasets efficiently on the dashboard"
       ],
-      github: "https://github.com/daniaarshad-lab/modest-wear",
-      duration: "3 months",
+      github: "https://github.com/daniaarshad-lab/VPN-User-Monitoring-Dashboard",
+      // duration: "3 months",
       team: "Solo Project",
       status: "Completed"
     },
+
     'university-event-management-system': {
       title: "University Event Management System",
       category: "Full-Stack Web Application",
       description: "Event management platform for universities with event creation, student registration, and analytics.",
       longDescription: "A comprehensive event management system specifically designed for university environments. The platform handles event creation, student registration, scheduling, and provides detailed analytics for event organizers using React and Firebase.",
       image: universityImg,
-      
-      tech: ["React", "Firebase", "Material-UI", "Cloud Functions"],
+      demoImages: [uniDemo1, uniDemo2, uniDemo3, uniDemo4, uniDemo5, uniDemo6, uniDemo7, uniDemo8, uniDemo9, uniDemo10, uniDemo11, uniDemo12],
+      tech: ["HTML", "CSS", "Bootstrap","MySQL"],
       features: [
         "Event creation and management",
-        "Student registration system",
-        "Real-time analytics",
-        "Calendar integration",
-        "Automated notifications",
-        "Multi-role user management"
+        "Student registration ",
+        "Calendar integration"
       ],
       challenges: [
-        "Managing complex scheduling requirements",
-        "Implementing real-time updates across users",
-        "Creating intuitive admin interfaces",
-        "Handling large concurrent registrations"
+        "Dsiplaying all the events in view",
+        "Creating intuitive interfaces"
       ],
-      github: "https://github.com/daniaarshad-lab/university-events",
-      duration: "4 months",
+      github: "https://github.com/daniaarshad-lab/sports-week",
+      // duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     },
-    'islamic-teaching-website': {
-      title: "Islamic Teaching Website",
+
+
+    'islamic-scholar-biography-website': {
+      title: "Islamic Scholar Biography Website",
       category: "Educational Web Application",
       description: "Comprehensive Islamic education platform with interactive lessons, Quran recitation, and learning management features.",
       longDescription: "A beautifully designed Islamic education platform that provides comprehensive religious learning resources. The website includes Quran recitation with translation, Hadith collections, prayer time calculations, interactive quizzes, and progress tracking for students. Built with modern web technologies to create an engaging and accessible learning experience.",
-      image: universityImg,
+      image: AhmedDebbaghImg,
       demoVideo: "/videos/islamic-teaching-demo.mp4", // Replace with your actual video file
       demoImages: [
-        "/images/islamic-1.jpg", // Replace with your actual images
-        "/images/islamic-2.jpg",
-        "/images/islamic-3.jpg",
-        "/images/islamic-4.jpg"
+        islamicDemo1, islamicDemo2, islamicDemo3, islamicDemo4, islamicDemo5, islamicDemo6, islamicDemo7, islamicDemo8, islamicDemo9, islamicDemo10,islamicDemo11,islamicDemo11,islamicDemo12,islamicDemo13
       ],
       tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
       features: [
-        "Interactive Quran recitation with translations",
-        "Hadith collection and search functionality",
-        "Prayer time calculator with notifications",
-        "Progress tracking for students",
-        "Interactive quizzes and assessments",
-        "Multi-language support"
+        "Calm, minimal designed for presence and narrative clarity",
+        "CMS-driven, modular frontend with curated collections",
+        "Vision-led, teacher-centric architecture "
       ],
-      challenges: [
-        "Accurate Arabic text rendering and RTL support",
-        "Implementing prayer time calculations for global locations",
-        "Creating an intuitive learning management system",
-        "Ensuring accessibility across all devices"
-      ],
-      github: "https://github.com/daniaarshad-lab/islamic-teaching",
-      duration: "4 months",
+    challenges: [
+  "Understanding the user’s requirements and the essence of each scholar’s life",
+  "Translating complex biographical and spiritual content into a clear, engaging website",
+  "Selecting typography, fonts, and colors that reflect Islamic heritage while remaining modern",
+  "Designing layouts that incorporate aesthetic shapes and patterns without feeling clichéd",
+  "Balancing traditional Islamic design elements with contemporary web design trends",
+  "Ensuring readability, accessibility, and a smooth user experience across devices"
+],
+     github: "https://github.com/daniaarshad-lab/SheikhAhmedBiography",
+      // duration: "4 months",
       team: "Solo Project",
       status: "Completed"
     }
@@ -530,13 +620,13 @@ const ProjectDetail = () => {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-4">Project Information</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center">
+                  {/* <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-3 text-primary" />
                     <div>
                       <p className="text-sm text-muted-foreground">Duration</p>
                       <p className="font-medium">{project.duration}</p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-3 text-primary" />
                     <div>

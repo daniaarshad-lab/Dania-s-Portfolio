@@ -11,17 +11,17 @@ const About = () => {
     {
       category: "Development",
       icon: Code,
-      items: ["React", "TypeScript", "Laravel", "Django", "FastAPI", "Node.js"]
+      items: ["React", "Laravel", "Node.js"]
     },
     {
       category: "Databases",
       icon: Database,
-      items: ["MySQL", "PostgreSQL", "Supabase", "SQLite3", "MongoDB"]
+      items: ["MySQL", "PostgreSQL", "Supabase", "MongoDB"]
     },
     {
       category: "Cloud & DevOps",
       icon: Cloud,
-      items: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform", "Prometheus", "Grafana"]
+      items: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform","Ansible", "Prometheus", "Grafana"]
     },
     {
       category: "Languages",
@@ -31,16 +31,13 @@ const About = () => {
     {
       category: "Tools",
       icon: Wrench,
-      items: ["Git", "GitHub", "Jira", "VS Code", "Google Colab", "Linux", "Android Studio"]
+      items: ["Git", "GitHub", "Jira", "VS Code", "Google Colab", "Linux","Eclipse", "Android Studio","Lucidchart","Visual Paradigm","Canva","Slack"]
     }
   ];
 
   const otherSkills = [
     "Technical Documentation",
     "UML Modeling",
-    "Lucidchart",
-    "Visual Paradigm",
-    "Canva",
     "Agile Practices",
     "Team Collaboration"
   ];
@@ -51,7 +48,7 @@ const About = () => {
     "Team collaboration with initiative-taking attitude",
     "Curiosity and commitment to continuous learning",
     "Strong attention to accuracy and quality",
-    "Leadership skills as Class Representative"
+    "Leadership skills in guiding projects and mentoring peers"
   ];
 
   return (
@@ -62,10 +59,10 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Hi, I'm Dania, a Software Engineer who loves building AI-powered and automated systems that solve real problems. I work with AI/ML, DevOps, and full-stack technologies to turn ideas into scalable, real-world solutions, focusing on smart systems that eliminate manual work and integrate AI efficiently.
+            Hi, I’m Dania, a Software Engineer specializing in full-stack development, cloud computing, DevOps, and AI-driven automation. I build scalable, production-ready systems that solve real-world problems by reducing manual processes and integrating intelligent technologies where they add real value.
           </p>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto animate-fade-in leading-relaxed mt-4" style={{ animationDelay: '0.3s' }}>
-            I understand and drive the entire Software Development Life Cycle — from gathering requirements and understanding client needs to designing system architecture and creating clear, detailed documentation. I enjoy building the foundation that makes great software possible.
+            I understand and drive the entire Software Development Life Cycle from gathering requirements and understanding client needs to designing system architecture and creating clear, detailed documentation. I enjoy building the foundation that makes great software possible.
           </p>
         </div>
 
@@ -85,11 +82,11 @@ const About = () => {
               <div className="bg-background/50 rounded-lg p-6 border border-primary/10">
                 <h4 className="text-xl font-semibold mb-2">Bachelor of Science in Software Engineering</h4>
                 <p className="text-primary font-medium mb-2">COMSATS University Islamabad, Wah Cantt Campus</p>
-                <p className="text-muted-foreground mb-2">2022 - 2026 (Expected Graduation: January 2026)</p>
-                <p className="text-primary font-semibold mb-2">CGPA: 3.7/4</p>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground mb-2">2022 - 2026 </p>
+                <p className="text-primary font-semibold mb-2">CGPA: 3.73/4</p>
+                {/* <p className="text-muted-foreground text-sm">
                   Comprehensive education in software development, algorithms, data structures, AI/ML, and modern programming paradigms.
-                </p>
+                </p> */}
               </div>
             </CardContent>
           </Card>

@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-8">
             <a 
-              href="https://github.com/dania-arshad" 
+              href="https://github.com/daniaarshad-lab" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-12 h-12 bg-background/10 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-colors group"
@@ -19,7 +19,7 @@ const Footer = () => {
               <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
             </a>
             <a 
-              href="https://linkedin.com/in/dania-arshad" 
+              href="https://linkedin.com/in/dania-arshad-se" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-12 h-12 bg-background/10 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-colors group"
@@ -37,12 +37,12 @@ const Footer = () => {
           {/* Copyright */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <span>© 2024 Dania Arshad. Made with</span>
-            <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+            {/* <Heart className="w-4 h-4 text-red-500 animate-pulse" /> */}
             <span>and lots of code.</span>
           </div>
           
           <p className="text-sm text-muted-foreground mt-2">
-            All rights reserved. Built with React, TypeScript, and Tailwind CSS.
+            All rights reserved. 
           </p>
         </div>
       </div>

@@ -6,8 +6,9 @@ const Experience = () => {
     {
       title: "Full Stack Developer with AI/ML Integration",
       company: "HealOra Ltd",
-      location: "Remote",
-      period: "Jan - Dec 2025",
+      someprojects:"Some Projects Led & Delivered in Collaboration",
+      location: "England,UK (Remote)",
+      period: "Jan 2025 - Jan 2026",
       type: "Remote Job",
       projects: [
         {
@@ -20,11 +21,11 @@ const Experience = () => {
           tech: "Python | Django | MySQL | REST APIs | React | Bootstrap",
           description: "Developed end-to-end web application for cruise company with booking management, role-based access control, and interactive dashboards."
         },
-        {
-          name: "Quantum vs Classical Model Simulation",
-          tech: "Python | Qiskit | NumPy | Matplotlib",
-          description: "Conducted comparative study between classical computational models and quantum simulations for complex problem-solving."
-        }
+        // {
+        //   name: "Quantum vs Classical Model Simulation",
+        //   tech: "Python | Qiskit | NumPy | Matplotlib",
+        //   description: "Conducted comparative study between classical computational models and quantum simulations for complex problem-solving."
+        // }
       ],
       icon: Bot
     },
@@ -38,7 +39,7 @@ const Experience = () => {
         {
           name: "Judicial Web & Case Law Management System",
           tech: "React | Node.js | MySQL",
-          description: "Developed official judicial web pages and Case Law Management System with advanced filtering, handling historical data from 1980-2025 with government web standards."
+          description: "Developed official judicial and Case Law Management System with advanced filtering, handling historical data from 1980-2025 with court's standards."
         }
       ],
       icon: Scale
@@ -48,8 +49,6 @@ const Experience = () => {
   const achievements = [
     "Winner, VISIO Spark 2025 (All Pakistan Level)",
     "Winner, Open House & Job Fair 2025",
-    "1st Position with 4.0/4.0 GPA in 5th, 6th, and 7th semesters",
-    "Class Representative throughout university journey"
   ];
 
   return (
@@ -67,7 +66,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Building innovative solutions with AI/ML integration and full-stack development
+            Building innovative solutions with CI/CD Pipeline ,AI & ML integration and full-stack development
           </p>
         </div>
         
@@ -106,6 +105,11 @@ const Experience = () => {
                           <h4 className="text-xl text-primary font-semibold">
                             {exp.company}
                           </h4>
+                           <h4 className="text-xl font-bold text-foreground mb-1">
+                            {exp.someprojects}
+                          </h4>
+
+                          
                         </div>
                         <div className="flex flex-col md:items-end text-muted-foreground mt-2 md:mt-0">
                           <div className="flex items-center gap-2 mb-1">

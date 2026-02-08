@@ -46,10 +46,13 @@ const Hero = () => {
               Dania Arshad
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
-              AI/ML | DevOps | Full Stack Development
+              Software Engineer 
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Passionate about integrating AI/ML solutions with full-stack development, A Software Engineer with hands-on experience in AI automation, full-stack development, and DevOps. I enjoy designing smart systems that eliminate manual work, integrate AI, and scale efficiently, building innovative applications that bridge technology and human needs.
+              | Full-Stack Development | DevOps & Cloud Computing  | AI & ML Solutions
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Software Engineer with hands-on experience in full-stack development, cloud computing, and DevOps, with applied use of AI for workflow automation. Skilled in building scalable web applications, deploying cloud-native systems, automating CI/CD pipelines, and integrating intelligent features into production environments.
             </p>
           </div>
           

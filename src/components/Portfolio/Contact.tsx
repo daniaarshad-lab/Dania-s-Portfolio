@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser'; // ✅ Import EmailJS
+import { Mail, Send, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 const Contact = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,47 +18,57 @@ const Contact = () => {
     message: ''
   });
 
+  /* ======================================================
+     🔑 EMAILJS CONFIGURATION — ADD YOUR KEYS HERE
+     ====================================================== */
+  const EMAILJS_SERVICE_ID = 'service_llhdtzy';   // 👈 Replace with your EmailJS Service ID
+  const EMAILJS_TEMPLATE_ID = 'template_qj3b4f5'; // 👈 Replace with your EmailJS Template ID
+  const EMAILJS_PUBLIC_KEY = 'ZEK4BOG6_pa_WoSqL';   // 👈 Replace with your EmailJS Public Key
+  /* ====================================================== */
+
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
       value: "daniaarshad19@gmail.com",
       href: "mailto:daniaarshad19@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+92 318 0061601",
-      href: "tel:+923180061601"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Available Worldwide",
-      href: "#"
     }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Create mailto link with form data
-    const mailtoLink = `mailto:daniaarshad19@gmail.com?subject=${encodeURIComponent(formData.subject || 'Portfolio Contact')}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    setIsLoading(false);
-    toast({
-      title: "Opening email client...",
-      description: "Your default email app should open now.",
-    });
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    try {
+      // ✅ Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'Portfolio Contact',
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message sent successfully 🚀",
+        description: "Thank you for reaching out. I’ll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Failed to send message ❌",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -111,15 +123,11 @@ const Contact = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    Full-stack web development
+                    Project Base work
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    AI/ML integration projects
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    Freelance consulting
+                    Freelance opportunities
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
