@@ -89,20 +89,14 @@ import skinDemo4 from '@/assets/skin-lesion/4.jpg';
 import skinDemo5 from '@/assets/skin-lesion/5.jpg';
 import skinDemo6 from '@/assets/skin-lesion/6.jpg';
 // VPN project demo images
-// import vpnDemo1 from '@/assets/vpn/1.jpg';
-// import vpnDemo2 from '@/assets/vpn/2.jpg';
-// import vpnDemo3 from '@/assets/vpn/3.jpg';
-// import vpnDemo4 from '@/assets/vpn/4.jpg';
-// import vpnDemo5 from '@/assets/vpn/5.jpg';
-// import vpnDemo6 from '@/assets/vpn/6.jpg';
-// import vpnDemo7 from '@/assets/vpn/7.jpg';
-import vpnDemo1 from '@/assets/VPN/1.jpg';
-import vpnDemo2 from '@/assets/VPN/2.jpg';
-import vpnDemo3 from '@/assets/VPN/3.jpg';
-import vpnDemo4 from '@/assets/VPN/4.jpg';
-import vpnDemo5 from '@/assets/VPN/5.jpg';
-import vpnDemo6 from '@/assets/VPN/6.jpg';
-import vpnDemo7 from '@/assets/VPN/7.jpg';
+import vpnDemo1 from '@/assets/vpn/1.jpg';
+import vpnDemo2 from '@/assets/vpn/2.jpg';
+import vpnDemo3 from '@/assets/vpn/3.jpg';
+import vpnDemo4 from '@/assets/vpn/4.jpg';
+import vpnDemo5 from '@/assets/vpn/5.jpg';
+import vpnDemo6 from '@/assets/vpn/6.jpg';
+import vpnDemo7 from '@/assets/vpn/7.jpg';
+
 
 // VPNAPP project demo images
 import vpnappDemo1 from '@/assets/VpnAPP/1.jpg';
