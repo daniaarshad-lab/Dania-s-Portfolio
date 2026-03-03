@@ -107,20 +107,20 @@ const Projects = () => {
         "Medical diagnostics application"
       ]
     },
-    {
-      title: "Islamic Scholar Biography Website",
-      category: "Full Stack Website",
-      description: "A modern, and content-rich website dedicated to presenting the life, teachings, and legacy of an Islamic scholar.",
-      image: AhmedDebbaghImg,
-      icon: BookOpen,
-      tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
-      github: "https://github.com/daniaarshad-lab/SheikhAhmedBiography",
-      highlights: [
-        "Calm, minimal designed for presence and narrative clarity",
-        "CMS-driven, modular frontend with curated collections",
-        "Vision-led, teacher-centric architecture "
-      ]
-    },
+    // {
+    //   title: "Islamic Scholar Biography Website",
+    //   category: "Full Stack Website",
+    //   description: "A modern, and content-rich website dedicated to presenting the life, teachings, and legacy of an Islamic scholar.",
+    //   image: AhmedDebbaghImg,
+    //   icon: BookOpen,
+    //   tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
+    //   github: "https://github.com/daniaarshad-lab/SheikhAhmedBiography",
+    //   highlights: [
+    //     "Calm, minimal designed for presence and narrative clarity",
+    //     "CMS-driven, modular frontend with curated collections",
+    //     "Vision-led, teacher-centric architecture "
+    //   ]
+    // },
     {
       title: "Full Stack Blog Publishing Platform",
       category: "Full Stack Website",

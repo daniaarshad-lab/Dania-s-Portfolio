@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <span>© 2024 Dania Arshad. Made with</span>
+            <span>© 2026 Dania Arshad. Made with</span>
             {/* <Heart className="w-4 h-4 text-red-500 animate-pulse" /> */}
             <span>and lots of code.</span>
           </div>

@@ -753,7 +753,7 @@ import uniDemo12 from '@/assets/university-events/12.png';
 import blogDemo1 from '@/assets/blog-platform/1.png';
 import blogDemo2 from '@/assets/blog-platform/2.png';
 import blogDemo3 from '@/assets/blog-platform/3.png';
-import blogDemo4 from '@/assets/blog-platform/4.png';
+// import blogDemo4 from '@/assets/blog-platform/4.png';
 import blogDemo5 from '@/assets/blog-platform/5.png';
 import blogDemo6 from '@/assets/blog-platform/6.png';
 import blogDemo7 from '@/assets/blog-platform/7.png';
@@ -1008,7 +1008,7 @@ const ProjectDetail = () => {
       image: blogImg,
       demoVideo: "https://www.youtube.com/embed/wWsZ2i46cP8",
       demoImages: [
-        blogDemo1, blogDemo2, blogDemo3, blogDemo4,blogDemo5, blogDemo6, blogDemo7, blogDemo8,blogDemo9
+        blogDemo1, blogDemo2, blogDemo3, blogDemo5, blogDemo6, blogDemo7, blogDemo8,blogDemo9
       ],
       tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       features: [
@@ -1030,34 +1030,34 @@ const ProjectDetail = () => {
       status: "Completed"
     },
 
-    'islamic-scholar-biography-website': {
-      title: "Islamic Scholar Biography Website",
-      category: "Educational Web Application",
-      description: "Comprehensive Islamic education platform with interactive lessons, Quran recitation, and learning management features.",
-      longDescription: "A beautifully designed Islamic education platform that provides comprehensive religious learning resources. The website includes Quran recitation with translation, Hadith collections, prayer time calculations, interactive quizzes, and progress tracking for students. Built with modern web technologies to create an engaging and accessible learning experience.",
-      image: AhmedDebbaghImg,
-      demoVideo: "https://www.youtube.com/embed/UJhRsvqlxEM",
-      demoImages: [
-        islamicDemo1, islamicDemo2, islamicDemo3, islamicDemo4, islamicDemo5, islamicDemo6, islamicDemo7, islamicDemo8, islamicDemo9, islamicDemo10,islamicDemo11,islamicDemo11,islamicDemo12,islamicDemo13
-      ],
-      tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
-      features: [
-        "Calm, minimal designed for presence and narrative clarity",
-        "CMS-driven, modular frontend with curated collections",
-        "Vision-led, teacher-centric architecture "
-      ],
-    challenges: [
-  "Understanding the user’s requirements and the essence of each scholar’s life",
-  "Translating complex biographical and spiritual content into a clear, engaging website",
-  "Selecting typography, fonts, and colors that reflect Islamic heritage while remaining modern",
-  "Designing layouts that incorporate aesthetic shapes and patterns without feeling clichéd",
-  "Balancing traditional Islamic design elements with contemporary web design trends",
-  "Ensuring readability, accessibility, and a smooth user experience across devices"
-],
-     github: "https://github.com/daniaarshad-lab/SheikhAhmedBiography",
-      team: "Solo Project",
-      status: "Completed"
-    },
+//     'islamic-scholar-biography-website': {
+//       title: "Islamic Scholar Biography Website",
+//       category: "Educational Web Application",
+//       description: "Comprehensive Islamic education platform with interactive lessons, Quran recitation, and learning management features.",
+//       longDescription: "A beautifully designed Islamic education platform that provides comprehensive religious learning resources. The website includes Quran recitation with translation, Hadith collections, prayer time calculations, interactive quizzes, and progress tracking for students. Built with modern web technologies to create an engaging and accessible learning experience.",
+//       image: AhmedDebbaghImg,
+//       demoVideo: "https://www.youtube.com/embed/UJhRsvqlxEM",
+//       demoImages: [
+//         islamicDemo1, islamicDemo2, islamicDemo3, islamicDemo4, islamicDemo5, islamicDemo6, islamicDemo7, islamicDemo8, islamicDemo9, islamicDemo10,islamicDemo11,islamicDemo11,islamicDemo12,islamicDemo13
+//       ],
+//       tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "REST API"],
+//       features: [
+//         "Calm, minimal designed for presence and narrative clarity",
+//         "CMS-driven, modular frontend with curated collections",
+//         "Vision-led, teacher-centric architecture "
+//       ],
+//     challenges: [
+//   "Understanding the user’s requirements and the essence of each scholar’s life",
+//   "Translating complex biographical and spiritual content into a clear, engaging website",
+//   "Selecting typography, fonts, and colors that reflect Islamic heritage while remaining modern",
+//   "Designing layouts that incorporate aesthetic shapes and patterns without feeling clichéd",
+//   "Balancing traditional Islamic design elements with contemporary web design trends",
+//   "Ensuring readability, accessibility, and a smooth user experience across devices"
+// ],
+    //  github: "https://github.com/daniaarshad-lab/SheikhAhmedBiography",
+    //   team: "Solo Project",
+    //   status: "Completed"
+    // },
 
 
         'full-stack-e-commerce-platform': {
